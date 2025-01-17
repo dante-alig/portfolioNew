@@ -21,6 +21,8 @@ const ProjectOverview = ({
   buttonStyle,
   sliderImages,
   sliderImagesResponsive,
+  pageSlider,
+  technologies,
 }) => {
   return (
     <div
@@ -72,7 +74,13 @@ const ProjectOverview = ({
           </div>
         </div>
       </div>
-      <ProjectSlider images={sliderImages} link={link} txtColor={txtColor} />
+      <ProjectSlider
+        images={sliderImages}
+        link={link}
+        txtColor={txtColor}
+        pageSlider={pageSlider}
+        technologies={technologies}
+      />
       <ProjectSliderResponsive
         images={sliderImagesResponsive}
         link={link}

@@ -22,7 +22,13 @@ import Page3 from "./page3";
  * @param {Array} link - Tableau d'objets contenant les liens (url et titre)
  * @param {string} txtColor - Couleur du texte pour les liens
  */
-const ProjectSlider = ({ images, link, txtColor }) => {
+const ProjectSlider = ({
+  images,
+  link,
+  txtColor,
+  pageSlider,
+  technologies,
+}) => {
   return (
     <div className="project-slider-container">
       {/* Configuration du carrousel Swiper */}
@@ -37,7 +43,7 @@ const ProjectSlider = ({ images, link, txtColor }) => {
       >
         <SwiperSlide>
           <div className="project-slide">
-            <Page1 />
+            <Page1 pageSlider={pageSlider} technologies={technologies} />
           </div>
         </SwiperSlide>
         <SwiperSlide>

@@ -39,6 +39,9 @@ import mockupYeniResponsive from "../images/responsive/yeni1.png";
 import mockupYeniResponsive2 from "../images/responsive/yeni2.png";
 import mockupYeniResponsive3 from "../images/responsive/yeni3.png";
 import mockupYeniResponsive4 from "../images/responsive/yeni4.png";
+import tech1 from "../images/page1/tech_gpt.png";
+import presentation from "../images/page1/presentation.png";
+
 import { Link } from "react-router-dom";
 
 const Home = ({ parallaxRef }) => {
@@ -62,12 +65,21 @@ const Home = ({ parallaxRef }) => {
             border="white"
             bgContainer="#f5e6c7"
             // Images pour le slider (vous pouvez les remplacer par vos propres images)
-            page1Slider={{
-              title: "Belami",
-              subTitle: "app mobile",
+            pageSlider={{
+              titleSlider: "Belami1",
+              subTitle: "/ app mobile",
               texte:
                 "Belami is a mobile application designed for users of dating apps. Its goal is to transform a profile picture or biography into engaging conversational opportunities. By leveraging artificial intelligence such as GPT-4, the application performs content analysis and generates personalized phrases. This use of AI helps users break the ice in a natural and meaningful way, while highlighting the practical application of LLMs in real-world scenarios. The application is still under development.",
+              imageSlider: presentation,
             }}
+            technologies={[
+              {
+                id: 1,
+                name: "OpenAI",
+                logo: tech1,
+                url: "https://openai.com",
+              },
+            ]}
             sliderImagesResponsive={[
               mockupBelamiResponsiveInfos,
               mockupBelamiResponsive,
@@ -113,6 +125,20 @@ const Home = ({ parallaxRef }) => {
             txtColor="black"
             border="black"
             bgContainer="#ffffff"
+            pageSlider={{
+              titleSlider: "Belami",
+              subTitle: "app mobile",
+              texte:
+                "Belami is a mobile application designed for users of dating apps. Its goal is to transform a profile picture or biography into engaging conversational opportunities. By leveraging artificial intelligence such as GPT-4, the application performs content analysis and generates personalized phrases. This use of AI helps users break the ice in a natural and meaningful way, while highlighting the practical application of LLMs in real-world scenarios. The application is still under development.",
+            }}
+            technologies={[
+              {
+                id: 1,
+                name: "OpenAI",
+                logo: tech1,
+                url: "https://openai.com",
+              },
+            ]}
             sliderImages={[mockupKarine1, mockupKarine2]}
             sliderImagesResponsive={[
               mockupKarineResponsive,
@@ -158,6 +184,20 @@ const Home = ({ parallaxRef }) => {
             border="#ea3323"
             bgContainer="black"
             sliderImages={[marvelm1, mockupMarvel2]}
+            pageSlider={{
+              titleSlider: "Belami",
+              subTitle: "app mobile",
+              texte:
+                "Belami is a mobile application designed for users of dating apps. Its goal is to transform a profile picture or biography into engaging conversational opportunities. By leveraging artificial intelligence such as GPT-4, the application performs content analysis and generates personalized phrases. This use of AI helps users break the ice in a natural and meaningful way, while highlighting the practical application of LLMs in real-world scenarios. The application is still under development.",
+            }}
+            technologies={[
+              {
+                id: 1,
+                name: "OpenAI",
+                logo: tech1,
+                url: "https://openai.com",
+              },
+            ]}
             sliderImagesResponsive={[
               mockupMarvelResponsive,
               mockupMarvelResponsive2,
@@ -208,6 +248,21 @@ const Home = ({ parallaxRef }) => {
             border="black"
             bgContainer="black"
             sliderImages={[lovely, mockupLovely2]}
+            pageSlider={{
+              titleSlider: "Belami",
+              subTitle: "app mobile",
+              texte:
+                "Belami is a mobile application designed for users of dating apps. Its goal is to transform a profile picture or biography into engaging conversational opportunities. By leveraging artificial intelligence such as GPT-4, the application performs content analysis and generates personalized phrases. This use of AI helps users break the ice in a natural and meaningful way, while highlighting the practical application of LLMs in real-world scenarios. The application is still under development.",
+              urlImage: { presentation },
+            }}
+            technologies={[
+              {
+                id: 1,
+                name: "OpenAI",
+                logo: tech1,
+                url: "https://openai.com",
+              },
+            ]}
             sliderImagesResponsive={[
               mockupLovelyResponsive,
               mockupLovelyResponsive2,
@@ -252,6 +307,20 @@ const Home = ({ parallaxRef }) => {
             border="white"
             bgContainer="#171616"
             sliderImages={[mokupYeni2, mokupYeni]}
+            pageSlider={{
+              titleSlider: "Belami",
+              subTitle: "app mobile",
+              texte:
+                "Belami is a mobile application designed for users of dating apps. Its goal is to transform a profile picture or biography into engaging conversational opportunities. By leveraging artificial intelligence such as GPT-4, the application performs content analysis and generates personalized phrases. This use of AI helps users break the ice in a natural and meaningful way, while highlighting the practical application of LLMs in real-world scenarios. The application is still under development.",
+            }}
+            technologies={[
+              {
+                id: 1,
+                name: "OpenAI",
+                logo: tech1,
+                url: "https://openai.com",
+              },
+            ]}
             sliderImagesResponsive={[
               mockupYeniResponsive,
               mockupYeniResponsive2,

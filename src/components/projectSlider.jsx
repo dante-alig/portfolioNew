@@ -28,6 +28,8 @@ const ProjectSlider = ({
   txtColor,
   pageSlider,
   technologies,
+  pageSlider2,
+  pageSlider3,
 }) => {
   return (
     <div className="project-slider-container">
@@ -48,12 +50,12 @@ const ProjectSlider = ({
         </SwiperSlide>
         <SwiperSlide>
           <div className="project-slide">
-            <Page2 />
+            <Page2 pageSlider2={pageSlider2} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="project-slide">
-            <Page3 />
+            <Page3 pageSlider3={pageSlider3} />
           </div>
         </SwiperSlide>
       </Swiper>

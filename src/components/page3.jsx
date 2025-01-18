@@ -1,11 +1,10 @@
 import React from "react";
-import mockup from "../images/page1/mockup.png";
 
-const Page3 = () => {
+const Page3 = ({ pageSlider3 }) => {
   return (
     <div className="page3-container">
-      <div className="content">
-        <img className="page3-image" src={mockup} />
+      <div className="content-image">
+        <img className="page3-image" src={pageSlider3} />
       </div>
     </div>
   );

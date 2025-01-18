@@ -2,20 +2,7 @@ import Header from "../components/header";
 import React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import ProjectOverview from "../components/projectOverview";
-import mockupBelami from "../images/mockupbelami.png";
-import mockupBelami2 from "../images/mockupbelami1.mp4";
-import mockupBelami3 from "../images/mockupbelami3.png";
-import mockupKarine from "../images/mockupkarine.png";
-import mockupKarine1 from "../images/mockupkarine.png";
-import mockupKarine2 from "../images/mockupkarine2.mp4";
-import mockupMarvel from "../images/ipad2.png";
-import mockupMarvel2 from "../images/mockupmarvel2.mp4";
-import mockupLovely from "../images/mockup6.png";
-import mockupLovely2 from "../images/mockuplovely2.png";
-import mokupYeni from "../images/mockup_yeni.png";
-import mokupYeni2 from "../images/mockupyeni1.png";
-import marvelm1 from "../images/mockupmarvel1.png";
-import lovely from "../images/mockuplovely.png";
+// ------ responsive--------
 import mockupBelamiResponsiveInfos from "../images/responsive/belami.png";
 import mockupBelamiResponsive from "../images/responsive/belami1.png";
 import mockupBelamiResponsive2 from "../images/responsive/belami2.png";
@@ -39,8 +26,37 @@ import mockupYeniResponsive from "../images/responsive/yeni1.png";
 import mockupYeniResponsive2 from "../images/responsive/yeni2.png";
 import mockupYeniResponsive3 from "../images/responsive/yeni3.png";
 import mockupYeniResponsive4 from "../images/responsive/yeni4.png";
-import tech1 from "../images/page1/tech_gpt.png";
-import presentation from "../images/page1/presentation.png";
+// ------ icons--------
+import karine from "../images/icon/k.png";
+import belami from "../images/icon/belami.png";
+import marvel from "../images/icon/marvel.png";
+import lovely from "../images/icon/lovelyplace.png";
+import yeni from "../images/icon/yeni.png";
+
+// ------ technos--------
+import openai from "../images/technos/openai.png";
+import figma from "../images/technos/figma.png";
+import react from "../images/technos/react.png";
+import nodeJs from "../images/technos/node.png";
+import express from "../images/technos/express.png";
+import typescript2 from "../images/technos/typescript2.png";
+import motion2 from "../images/technos/motion2.png";
+import react2 from "../images/technos/react2.png";
+import mongo from "../images/technos/mongodb.png";
+import expo from "../images/technos/expo.png";
+
+// ------ presentation--------
+import belamiPresentation from "../images/presentation/belami.png";
+import karinePresentation from "../images/presentation/karine.png";
+import marvelPresentation from "../images/presentation/marvel.png";
+import lovelyPresentation from "../images/presentation/lovely.png";
+// ------ videos--------
+import video1 from "../images/videos/video1.mp4";
+import video2 from "../images/videos/video2.mp4";
+import video3 from "../images/videos/video3.mp4";
+import video4 from "../images/videos/video4.mp4";
+// ------ mockups--------
+import mockup from "../images/page1/mockup.png";
 
 import { Link } from "react-router-dom";
 
@@ -52,6 +68,7 @@ const Home = ({ parallaxRef }) => {
           <Header parallaxRef={parallaxRef} />
         </ParallaxLayer>
 
+        {/* -------------------------BELAMI------------------------- */}
         <ParallaxLayer offset={0.999} speed={0.5}>
           <ProjectOverview
             pageNumber="01"
@@ -66,20 +83,91 @@ const Home = ({ parallaxRef }) => {
             bgContainer="#f5e6c7"
             // Images pour le slider (vous pouvez les remplacer par vos propres images)
             pageSlider={{
-              titleSlider: "Belami1",
+              icon: belami,
+              titleSlider: "Belami",
               subTitle: "/ app mobile",
               texte:
                 "Belami is a mobile application designed for users of dating apps. Its goal is to transform a profile picture or biography into engaging conversational opportunities. By leveraging artificial intelligence such as GPT-4, the application performs content analysis and generates personalized phrases. This use of AI helps users break the ice in a natural and meaningful way, while highlighting the practical application of LLMs in real-world scenarios. The application is still under development.",
-              imageSlider: presentation,
+              imageSlider: belamiPresentation,
+              backgroundTextSlider: "#f5e6c7",
+              textColor: "black",
             }}
             technologies={[
               {
                 id: 1,
                 name: "OpenAI",
-                logo: tech1,
+                logo: openai,
+                url: "https://openai.com",
+              },
+              {
+                id: 2,
+                name: "Expo",
+                logo: expo,
+                url: "https://openai.com",
+              },
+              {
+                id: 3,
+                name: "Figma",
+                logo: figma,
+                url: "https://openai.com",
+              },
+              {
+                id: 4,
+                name: "Express",
+                logo: express,
+                url: "https://openai.com",
+              },
+              {
+                id: 4,
+                name: "Node",
+                logo: nodeJs,
+                url: "https://openai.com",
+              },
+              {
+                id: 4,
+                name: "React",
+                logo: react,
                 url: "https://openai.com",
               },
             ]}
+            pageSlider2={{
+              videoSlider: video1,
+              backgroundSlider: "#f5e6c7",
+              textColor: "black",
+              featuresOverview: [
+                {
+                  id: 1,
+                  title: "Precise Contextual Analysis",
+                  description:
+                    "Designing a system capable of analyzing dating app bios to detect relevant information such as interests, tone, or personality traits while ensuring high accuracy and respecting user privacy.",
+                },
+                {
+                  id: 2,
+                  title: "Personalized Content Generation",
+                  description:
+                    "Developing an AI-based algorithm (GPT-4O) to create unique and relevant pickup lines tailored to each user, avoiding generic or inappropriate responses to foster meaningful engagement.",
+                },
+                {
+                  id: 3,
+                  title: "Flexible Tone Options",
+                  description:
+                    "Providing a variety of tones (humorous, serious, romantic, etc.) to suit user preferences, while ensuring authenticity and consistency with the analyzed profile data.",
+                },
+                {
+                  id: 4,
+                  title: "Saved Data Management",
+                  description:
+                    "Implementing a feature that allows users to save and organize generated pickup lines, with an intuitive interface that simplifies management and enhances user experience.",
+                },
+                {
+                  id: 5,
+                  title: "Intuitive and User-Friendly Design",
+                  description:
+                    "Creating a clear and simple interface that enables users to effortlessly copy and paste lines into their conversations, while ensuring the application remains accessible and enjoyable for beginners.",
+                },
+              ],
+            }}
+            pageSlider3={mockup}
             sliderImagesResponsive={[
               mockupBelamiResponsiveInfos,
               mockupBelamiResponsive,
@@ -112,6 +200,7 @@ const Home = ({ parallaxRef }) => {
           />
         </ParallaxLayer>
 
+        {/* -------------------------KARINE RASPAIL------------------------- */}
         <ParallaxLayer offset={1.999} speed={0.5}>
           <ProjectOverview
             pageNumber="02"
@@ -126,20 +215,73 @@ const Home = ({ parallaxRef }) => {
             border="black"
             bgContainer="#ffffff"
             pageSlider={{
-              titleSlider: "Belami",
-              subTitle: "app mobile",
+              icon: karine,
+              titleSlider: "Psychogenealogy",
+              subTitle: "/ Website",
               texte:
-                "Belami is a mobile application designed for users of dating apps. Its goal is to transform a profile picture or biography into engaging conversational opportunities. By leveraging artificial intelligence such as GPT-4, the application performs content analysis and generates personalized phrases. This use of AI helps users break the ice in a natural and meaningful way, while highlighting the practical application of LLMs in real-world scenarios. The application is still under development.",
+                "My first individual web development project, created for a family member. This project allowed me to strengthen my programming skills and familiarize myself with TypeScript. The intentionally simple design reflects my main goal: to explore and master the technical fundamentals of this language.",
+              imageSlider: karinePresentation,
+              backgroundTextSlider: "#000000",
+              textColor: "white",
             }}
             technologies={[
               {
                 id: 1,
-                name: "OpenAI",
-                logo: tech1,
+                name: "React",
+                logo: react2,
+                url: "https://openai.com",
+              },
+              {
+                id: 2,
+                name: "Ts",
+                logo: typescript2,
+                url: "https://openai.com",
+              },
+              {
+                id: 3,
+                name: "Framer",
+                logo: motion2,
                 url: "https://openai.com",
               },
             ]}
-            sliderImages={[mockupKarine1, mockupKarine2]}
+            pageSlider2={{
+              videoSlider: video2,
+              backgroundSlider: "#000000",
+              textColor: "white",
+              featuresOverview: [
+                {
+                  id: 1,
+                  title: "Precise Contextual Analysis",
+                  description:
+                    "Designing a system capable of analyzing dating app bios to detect relevant information such as interests, tone, or personality traits while ensuring high accuracy and respecting user privacy.",
+                },
+                {
+                  id: 2,
+                  title: "Personalized Content Generation",
+                  description:
+                    "Developing an AI-based algorithm (GPT-4O) to create unique and relevant pickup lines tailored to each user, avoiding generic or inappropriate responses to foster meaningful engagement.",
+                },
+                {
+                  id: 3,
+                  title: "Flexible Tone Options",
+                  description:
+                    "Providing a variety of tones (humorous, serious, romantic, etc.) to suit user preferences, while ensuring authenticity and consistency with the analyzed profile data.",
+                },
+                {
+                  id: 4,
+                  title: "Saved Data Management",
+                  description:
+                    "Implementing a feature that allows users to save and organize generated pickup lines, with an intuitive interface that simplifies management and enhances user experience.",
+                },
+                {
+                  id: 5,
+                  title: "Intuitive and User-Friendly Design",
+                  description:
+                    "Creating a clear and simple interface that enables users to effortlessly copy and paste lines into their conversations, while ensuring the application remains accessible and enjoyable for beginners.",
+                },
+              ],
+            }}
+            pageSlider3={mockup}
             sliderImagesResponsive={[
               mockupKarineResponsive,
               mockupKarineResponsive2,
@@ -170,6 +312,7 @@ const Home = ({ parallaxRef }) => {
           />
         </ParallaxLayer>
 
+        {/* -------------------------MARVEL------------------------- */}
         <ParallaxLayer offset={2.999} speed={1}>
           <ProjectOverview
             pageNumber="03"
@@ -183,21 +326,80 @@ const Home = ({ parallaxRef }) => {
             txtColor="#ea3323"
             border="#ea3323"
             bgContainer="black"
-            sliderImages={[marvelm1, mockupMarvel2]}
             pageSlider={{
-              titleSlider: "Belami",
-              subTitle: "app mobile",
+              icon: marvel,
+              titleSlider: "Marvel",
+              subTitle: "/ app mobile",
               texte:
-                "Belami is a mobile application designed for users of dating apps. Its goal is to transform a profile picture or biography into engaging conversational opportunities. By leveraging artificial intelligence such as GPT-4, the application performs content analysis and generates personalized phrases. This use of AI helps users break the ice in a natural and meaningful way, while highlighting the practical application of LLMs in real-world scenarios. The application is still under development.",
+                "Marvel is a mobile application designed for users of dating apps. Its goal is to transform a profile picture or biography into engaging conversational opportunities. By leveraging artificial intelligence such as GPT-4, the application performs content analysis and generates personalized phrases. This use of AI helps users break the ice in a natural and meaningful way, while highlighting the practical application of LLMs in real-world scenarios. The application is still under development.",
+              imageSlider: marvelPresentation,
+              backgroundTextSlider: "#f71804",
+              textColor: "black",
             }}
             technologies={[
               {
                 id: 1,
-                name: "OpenAI",
-                logo: tech1,
+                name: "React",
+                logo: react,
+                url: "https://openai.com",
+              },
+              {
+                id: 2,
+                name: "Express",
+                logo: express,
+                url: "https://openai.com",
+              },
+              {
+                id: 3,
+                name: "Node",
+                logo: nodeJs,
+                url: "https://openai.com",
+              },
+              {
+                id: 3,
+                name: "MongoDb",
+                logo: mongo,
                 url: "https://openai.com",
               },
             ]}
+            pageSlider2={{
+              videoSlider: video3,
+              backgroundSlider: "#000000",
+              textColor: "white",
+              featuresOverview: [
+                {
+                  id: 1,
+                  title: "Precise Contextual Analysis",
+                  description:
+                    "Designing a system capable of analyzing dating app bios to detect relevant information such as interests, tone, or personality traits while ensuring high accuracy and respecting user privacy.",
+                },
+                {
+                  id: 2,
+                  title: "Personalized Content Generation",
+                  description:
+                    "Developing an AI-based algorithm (GPT-4O) to create unique and relevant pickup lines tailored to each user, avoiding generic or inappropriate responses to foster meaningful engagement.",
+                },
+                {
+                  id: 3,
+                  title: "Flexible Tone Options",
+                  description:
+                    "Providing a variety of tones (humorous, serious, romantic, etc.) to suit user preferences, while ensuring authenticity and consistency with the analyzed profile data.",
+                },
+                {
+                  id: 4,
+                  title: "Saved Data Management",
+                  description:
+                    "Implementing a feature that allows users to save and organize generated pickup lines, with an intuitive interface that simplifies management and enhances user experience.",
+                },
+                {
+                  id: 5,
+                  title: "Intuitive and User-Friendly Design",
+                  description:
+                    "Creating a clear and simple interface that enables users to effortlessly copy and paste lines into their conversations, while ensuring the application remains accessible and enjoyable for beginners.",
+                },
+              ],
+            }}
+            pageSlider3={mockup}
             sliderImagesResponsive={[
               mockupMarvelResponsive,
               mockupMarvelResponsive2,
@@ -228,6 +430,8 @@ const Home = ({ parallaxRef }) => {
             ]}
           />
         </ParallaxLayer>
+
+        {/* -------------------------LOVELY PLACE------------------------- */}
         <ParallaxLayer offset={3.3} speed={3}>
           <ProjectOverview
             pageNumber="04"
@@ -247,22 +451,74 @@ const Home = ({ parallaxRef }) => {
             txtColor="black"
             border="black"
             bgContainer="black"
-            sliderImages={[lovely, mockupLovely2]}
             pageSlider={{
-              titleSlider: "Belami",
-              subTitle: "app mobile",
+              icon: lovely,
+              titleSlider: "Lovely place",
+              subTitle: "/ app mobile",
               texte:
-                "Belami is a mobile application designed for users of dating apps. Its goal is to transform a profile picture or biography into engaging conversational opportunities. By leveraging artificial intelligence such as GPT-4, the application performs content analysis and generates personalized phrases. This use of AI helps users break the ice in a natural and meaningful way, while highlighting the practical application of LLMs in real-world scenarios. The application is still under development.",
-              urlImage: { presentation },
+                "Lovely Place is a website designed to turn every date into a unique and personalized experience. It helps users find the perfect place and activity for a date, based on various criteria such as personal preferences, the desired atmosphere, and budget. The site stands out with its tailored approach, enabling users to plan memorable moments perfectly suited to the person they want to invite.",
+              imageSlider: lovelyPresentation,
+              backgroundTextSlider: "#ffffff",
+              textColor: "black",
             }}
             technologies={[
               {
                 id: 1,
-                name: "OpenAI",
-                logo: tech1,
+                name: "React",
+                logo: react,
+                url: "https://openai.com",
+              },
+              {
+                id: 2,
+                name: "Express",
+                logo: express,
+                url: "https://openai.com",
+              },
+              {
+                id: 3,
+                name: "Node Js",
+                logo: nodeJs,
+                url: "https://openai.com",
+              },
+              {
+                id: 4,
+                name: "MongoDB",
+                logo: mongo,
                 url: "https://openai.com",
               },
             ]}
+            pageSlider2={{
+              videoSlider: video4,
+              backgroundSlider: "#000000",
+              textColor: "white",
+              featuresOverview: [
+                {
+                  id: 1,
+                  title: "Geolocation-Based Recommendations",
+                  description:
+                    "Implement an accurate geolocation feature to recommend relevant places in real-time.",
+                },
+                {
+                  id: 2,
+                  title: "Category Filters",
+                  description:
+                    "Design an efficient filtering system that allows users to customize their searches based on various criteria (type of activity, ambiance, budget, etc.).",
+                },
+                {
+                  id: 3,
+                  title: "Location Mapping on Google Maps",
+                  description:
+                    "Develop an interactive and responsive map with dynamic markers for each recommended location.",
+                },
+                {
+                  id: 4,
+                  title: "Providing Relevant Information",
+                  description:
+                    "Offer detailed descriptions for each recommended place, including reviews, opening hours, photos, and other useful information to enhance the user experience.",
+                },
+              ],
+            }}
+            pageSlider3={mockup}
             sliderImagesResponsive={[
               mockupLovelyResponsive,
               mockupLovelyResponsive2,
@@ -293,6 +549,7 @@ const Home = ({ parallaxRef }) => {
           />
         </ParallaxLayer>
 
+        {/* -------------------------YENI------------------------- */}
         <ParallaxLayer offset={3.999} speed={0.5}>
           <ProjectOverview
             pageNumber="05"
@@ -306,21 +563,62 @@ const Home = ({ parallaxRef }) => {
             bgColor="black"
             border="white"
             bgContainer="#171616"
-            sliderImages={[mokupYeni2, mokupYeni]}
             pageSlider={{
-              titleSlider: "Belami",
-              subTitle: "app mobile",
+              icon: yeni,
+              titleSlider: "Yeni",
+              subTitle: "/ app mobile",
               texte:
-                "Belami is a mobile application designed for users of dating apps. Its goal is to transform a profile picture or biography into engaging conversational opportunities. By leveraging artificial intelligence such as GPT-4, the application performs content analysis and generates personalized phrases. This use of AI helps users break the ice in a natural and meaningful way, while highlighting the practical application of LLMs in real-world scenarios. The application is still under development.",
+                "YENI is a platform dedicated to creation, collaboration, and visibility exchange among content creators, artists, influencers, models, and businesses. Its mission is to simplify and streamline collaborations in the audiovisual, creative, and fashion industries by leveraging a model of mutual benefit. At the same time, it enables brands to support their growth in a gradual, creative, and authentic way.",
+              imageSlider: belamiPresentation,
+              backgroundTextSlider: "#545454",
+              textColor: "black",
             }}
             technologies={[
               {
                 id: 1,
                 name: "OpenAI",
-                logo: tech1,
+                logo: openai,
                 url: "https://openai.com",
               },
             ]}
+            pageSlider2={{
+              videoSlider: video1,
+              backgroundSlider: "#f0e7cc",
+              textColor: "black",
+              featuresOverview: [
+                {
+                  id: 1,
+                  title: "Precise Contextual Analysis",
+                  description:
+                    "Designing a system capable of analyzing dating app bios to detect relevant information such as interests, tone, or personality traits while ensuring high accuracy and respecting user privacy.",
+                },
+                {
+                  id: 2,
+                  title: "Personalized Content Generation",
+                  description:
+                    "Developing an AI-based algorithm (GPT-4O) to create unique and relevant pickup lines tailored to each user, avoiding generic or inappropriate responses to foster meaningful engagement.",
+                },
+                {
+                  id: 3,
+                  title: "Flexible Tone Options",
+                  description:
+                    "Providing a variety of tones (humorous, serious, romantic, etc.) to suit user preferences, while ensuring authenticity and consistency with the analyzed profile data.",
+                },
+                {
+                  id: 4,
+                  title: "Saved Data Management",
+                  description:
+                    "Implementing a feature that allows users to save and organize generated pickup lines, with an intuitive interface that simplifies management and enhances user experience.",
+                },
+                {
+                  id: 5,
+                  title: "Intuitive and User-Friendly Design",
+                  description:
+                    "Creating a clear and simple interface that enables users to effortlessly copy and paste lines into their conversations, while ensuring the application remains accessible and enjoyable for beginners.",
+                },
+              ],
+            }}
+            pageSlider3={mockup}
             sliderImagesResponsive={[
               mockupYeniResponsive,
               mockupYeniResponsive2,

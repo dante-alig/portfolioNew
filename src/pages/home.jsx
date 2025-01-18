@@ -118,13 +118,13 @@ const Home = ({ parallaxRef }) => {
                 url: "https://openai.com",
               },
               {
-                id: 4,
+                id: 5,
                 name: "Node",
                 logo: nodeJs,
                 url: "https://openai.com",
               },
               {
-                id: 4,
+                id: 6,
                 name: "React",
                 logo: react,
                 url: "https://openai.com",
@@ -356,7 +356,7 @@ const Home = ({ parallaxRef }) => {
                 url: "https://openai.com",
               },
               {
-                id: 3,
+                id: 4,
                 name: "MongoDb",
                 logo: mongo,
                 url: "https://openai.com",

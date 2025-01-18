@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import profil from "../images/profil.jpg";
 import Drawer from "./drawer";
 import { Link } from "react-router-dom";
@@ -10,6 +11,65 @@ const Nav = ({ parallaxRef }) => {
     if (parallaxRef.current) {
       parallaxRef.current.scrollTo(offset);
     }
+  };
+
+  const NavLink = ({ children, onClick, href }) => {
+    return (
+      <motion.div
+        style={{ 
+          position: "relative",
+          cursor: "pointer",
+          padding: "2px 0"
+        }}
+        whileHover="hover"
+      >
+        {href ? (
+          <Link
+            to={href}
+            target="_blank"
+            style={{ 
+              textDecoration: "none", 
+              color: "inherit",
+              position: "relative",
+              zIndex: 1
+            }}
+          >
+            {children}
+          </Link>
+        ) : (
+          <div
+            onClick={onClick}
+            style={{ 
+              position: "relative",
+              zIndex: 1
+            }}
+          >
+            {children}
+          </div>
+        )}
+        <motion.div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: "2px",
+            background: "#000",
+            originX: 0
+          }}
+          initial={{ scaleX: 0 }}
+          variants={{
+            hover: {
+              scaleX: 1,
+              transition: {
+                duration: 0.3,
+                ease: "easeInOut"
+              }
+            }
+          }}
+        />
+      </motion.div>
+    );
   };
 
   return (
@@ -24,22 +84,15 @@ const Nav = ({ parallaxRef }) => {
 
       {/* ----- Navigation--------- */}
       <nav>
-        <div onClick={() => scrollToSection(0)} style={{ cursor: "pointer" }}>
+        <NavLink onClick={() => scrollToSection(0)}>
           Work
-        </div>
-        <div
-          onClick={() => setIsDrawerOpen(true)}
-          style={{ cursor: "pointer" }}
-        >
+        </NavLink>
+        <NavLink onClick={() => setIsDrawerOpen(true)}>
           About
-        </div>
-        <Link
-          to="https://calendly.com/samuelceleste/appel"
-          target="_blank"
-          style={{ textDecoration: "none", color: "inherit" }}
-        >
+        </NavLink>
+        <NavLink href="https://calendly.com/samuelceleste/appel">
           Contact
-        </Link>
+        </NavLink>
       </nav>
       <Drawer isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} />
     </div>

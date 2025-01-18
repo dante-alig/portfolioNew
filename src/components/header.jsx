@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Scroll from "./scroll";
 
 const Header = ({ parallaxRef }) => {
@@ -7,37 +8,120 @@ const Header = ({ parallaxRef }) => {
     }
   };
 
+  const titleVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const describeVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.6,
+        delay: 0.3,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const projectsVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: { 
+        duration: 0.6,
+        delay: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const projectTitleVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: (custom) => ({ 
+      opacity: 1, 
+      x: 0,
+      transition: { 
+        duration: 0.4,
+        delay: 0.8 + (custom * 0.1),
+        ease: "easeOut"
+      }
+    })
+  };
+
   return (
     <div>
       <header>
         <div className="title-container">
-          <div className="title-box">
+          <motion.div 
+            className="title-box"
+            initial="hidden"
+            animate="visible"
+            variants={titleVariants}
+          >
             <h1>I'm Samuel</h1>
             <h1>Céleste.</h1>
-          </div>
-          <div className="describe">
+          </motion.div>
+          <motion.div 
+            className="describe"
+            initial="hidden"
+            animate="visible"
+            variants={describeVariants}
+          >
             Designer & Full Stack Developer, I craft innovative digital
             solutions that blend aesthetics and performance.
-          </div>
+          </motion.div>
         </div>
-        <div className="projects">
+        <motion.div 
+          className="projects"
+          initial="hidden"
+          animate="visible"
+          variants={projectsVariants}
+        >
           <div className="projects-section">Selected projects</div>
-          <div className="projects-title" onClick={() => scrollToSection(1)}>
+          <motion.div 
+            className="projects-title" 
+            onClick={() => scrollToSection(1)}
+            custom={0}
+            variants={projectTitleVariants}
+          >
             Belami
-          </div>
-          <div className="projects-title" onClick={() => scrollToSection(2)}>
+          </motion.div>
+          <motion.div 
+            className="projects-title" 
+            onClick={() => scrollToSection(2)}
+            custom={1}
+            variants={projectTitleVariants}
+          >
             Psychogenea
-          </div>
-          <div className="projects-title" onClick={() => scrollToSection(3)}>
+          </motion.div>
+          <motion.div 
+            className="projects-title" 
+            onClick={() => scrollToSection(3)}
+            custom={2}
+            variants={projectTitleVariants}
+          >
             Lovely place
-          </div>
-          <div
+          </motion.div>
+          <motion.div
             className="projects-title projects-title-under"
             onClick={() => scrollToSection(4)}
+            custom={3}
+            variants={projectTitleVariants}
           >
             Yeni
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </header>
       <Scroll />
     </div>

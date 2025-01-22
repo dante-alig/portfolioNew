@@ -68,10 +68,247 @@ const Home = ({ parallaxRef }) => {
           <Header parallaxRef={parallaxRef} />
         </ParallaxLayer>
 
-        {/* -------------------------BELAMI------------------------- */}
+        {/* -------------------------LOVELY PLACE------------------------- */}
         <ParallaxLayer offset={0.999} speed={0.5}>
           <ProjectOverview
             pageNumber="01"
+            totalPages="05"
+            titlePresentation="Lovely place - the best romantic spots in Paris to create unforgettable dates."
+            title="Lovely place"
+            date="Novembre 2024 - in progress "
+            techno={[
+              "Figma",
+              "React",
+              "Typescript",
+              "Google Map API",
+              "MongoDB",
+            ]}
+            roles={["Ui Design", "Dev front & back"]}
+            bgColor="#f5e6c7"
+            txtColor="black"
+            border="black"
+            bgContainer="black"
+            pageSlider={{
+              icon: lovely,
+              titleSlider: "Lovely place",
+              subTitle: "/ app mobile",
+              texte:
+                "Lovely Place is a website designed to turn every date into a unique and personalized experience. It helps users find the perfect place and activity for a date, based on various criteria such as personal preferences, the desired atmosphere, and budget. The site stands out with its tailored approach, enabling users to plan memorable moments perfectly suited to the person they want to invite.",
+              imageSlider: lovelyPresentation,
+              backgroundTextSlider: "#ffffff",
+              textColor: "black",
+            }}
+            technologies={[
+              {
+                id: 1,
+                name: "React",
+                logo: react,
+                url: "https://openai.com",
+              },
+              {
+                id: 2,
+                name: "Express",
+                logo: express,
+                url: "https://openai.com",
+              },
+              {
+                id: 3,
+                name: "Node Js",
+                logo: nodeJs,
+                url: "https://openai.com",
+              },
+              {
+                id: 4,
+                name: "MongoDB",
+                logo: mongo,
+                url: "https://openai.com",
+              },
+            ]}
+            pageSlider2={{
+              videoSlider: video4,
+              backgroundSlider: "#000000",
+              textColor: "white",
+              featuresOverview: [
+                {
+                  id: 1,
+                  title: "Geolocation-Based Recommendations",
+                  description:
+                    "Implement an accurate geolocation feature to recommend relevant places in real-time.",
+                },
+                {
+                  id: 2,
+                  title: "Category Filters",
+                  description:
+                    "Design an efficient filtering system that allows users to customize their searches based on various criteria (type of activity, ambiance, budget, etc.).",
+                },
+                {
+                  id: 3,
+                  title: "Location Mapping on Google Maps",
+                  description:
+                    "Develop an interactive and responsive map with dynamic markers for each recommended location.",
+                },
+                {
+                  id: 4,
+                  title: "Providing Relevant Information",
+                  description:
+                    "Offer detailed descriptions for each recommended place, including reviews, opening hours, photos, and other useful information to enhance the user experience.",
+                },
+              ],
+            }}
+            pageSlider3={mockup}
+            sliderImagesResponsive={[
+              mockupLovelyResponsive,
+              mockupLovelyResponsive2,
+              mockupLovelyResponsive3,
+              mockupLovelyResponsive4,
+            ]}
+            cssStyle={[
+              "featured-container-tab0",
+              "featured-mokup-tab1",
+              "featured-presentation-tab2",
+              "button-display",
+            ]}
+            buttonStyle={{
+              buttonLink: "button-link-lovely",
+              linkSpan: "link-lovely",
+              typoGitHub: "fa-arrow-up-right-from-square-lovely",
+            }}
+            link={[
+              {
+                url: "https://portfolio-lovelyplace.netlify.app/",
+                title: "Netlify",
+              },
+              {
+                url: "https://github.com/dante-alig/portfolio_lovelyback.git",
+                title: "Github",
+              },
+            ]}
+          />
+        </ParallaxLayer>
+
+        {/* -------------------------MARVEL------------------------- */}
+        <ParallaxLayer offset={1.999} speed={0.5}>
+          <ProjectOverview
+            pageNumber="02"
+            totalPages="05"
+            titlePresentation="Marvel - Catalogs all characters in one place."
+            title="Marvel"
+            date="Aout 2024 "
+            techno={["React", "Backend", "Express", "MongoDB"]}
+            roles={["Ui Design", "Dev front & back"]}
+            bgColor="#1A1B1D"
+            txtColor="#ea3323"
+            border="#ea3323"
+            bgContainer="black"
+            pageSlider={{
+              icon: marvel,
+              titleSlider: "Marvel",
+              subTitle: "/ app mobile",
+              texte:
+                "Marvel is a mobile application designed for users of dating apps. Its goal is to transform a profile picture or biography into engaging conversational opportunities. By leveraging artificial intelligence such as GPT-4, the application performs content analysis and generates personalized phrases. This use of AI helps users break the ice in a natural and meaningful way, while highlighting the practical application of LLMs in real-world scenarios. The application is still under development.",
+              imageSlider: marvelPresentation,
+              backgroundTextSlider: "#f71804",
+              textColor: "black",
+            }}
+            technologies={[
+              {
+                id: 1,
+                name: "React",
+                logo: react,
+                url: "https://openai.com",
+              },
+              {
+                id: 2,
+                name: "Express",
+                logo: express,
+                url: "https://openai.com",
+              },
+              {
+                id: 3,
+                name: "Node",
+                logo: nodeJs,
+                url: "https://openai.com",
+              },
+              {
+                id: 4,
+                name: "MongoDb",
+                logo: mongo,
+                url: "https://openai.com",
+              },
+            ]}
+            pageSlider2={{
+              videoSlider: video3,
+              backgroundSlider: "#000000",
+              textColor: "white",
+              featuresOverview: [
+                {
+                  id: 1,
+                  title: "Precise Contextual Analysis",
+                  description:
+                    "Designing a system capable of analyzing dating app bios to detect relevant information such as interests, tone, or personality traits while ensuring high accuracy and respecting user privacy.",
+                },
+                {
+                  id: 2,
+                  title: "Personalized Content Generation",
+                  description:
+                    "Developing an AI-based algorithm (GPT-4O) to create unique and relevant pickup lines tailored to each user, avoiding generic or inappropriate responses to foster meaningful engagement.",
+                },
+                {
+                  id: 3,
+                  title: "Flexible Tone Options",
+                  description:
+                    "Providing a variety of tones (humorous, serious, romantic, etc.) to suit user preferences, while ensuring authenticity and consistency with the analyzed profile data.",
+                },
+                {
+                  id: 4,
+                  title: "Saved Data Management",
+                  description:
+                    "Implementing a feature that allows users to save and organize generated pickup lines, with an intuitive interface that simplifies management and enhances user experience.",
+                },
+                {
+                  id: 5,
+                  title: "Intuitive and User-Friendly Design",
+                  description:
+                    "Creating a clear and simple interface that enables users to effortlessly copy and paste lines into their conversations, while ensuring the application remains accessible and enjoyable for beginners.",
+                },
+              ],
+            }}
+            pageSlider3={mockup}
+            sliderImagesResponsive={[
+              mockupMarvelResponsive,
+              mockupMarvelResponsive2,
+              mockupMarvelResponsive3,
+              mockupMarvelResponsive4,
+              mockupMarvelResponsive5,
+            ]}
+            cssStyle={[
+              "featured-container-tab0",
+              "featured-mokup-tab1",
+              "featured-presentation-tab2",
+              "button-display",
+            ]}
+            buttonStyle={{
+              buttonLink: "button-link-marvel",
+              linkSpan: "link-marvel",
+              typoGitHub: "fa-arrow-up-right-from-square-marvel",
+            }}
+            link={[
+              {
+                url: "https://marvelarchiv.netlify.app/",
+                title: "Netlify",
+              },
+              {
+                url: "https://github.com/dante-alig/portfolio_marvel",
+                title: "Github",
+              },
+            ]}
+          />
+        </ParallaxLayer>
+
+        {/* -------------------------BELAMI------------------------- */}
+        <ParallaxLayer offset={2.999} speed={1.5}>
+          <ProjectOverview
+            pageNumber="03"
             totalPages="05"
             titlePresentation="Belami - AI generated creative opening messages."
             title="Belami"
@@ -201,9 +438,9 @@ const Home = ({ parallaxRef }) => {
         </ParallaxLayer>
 
         {/* -------------------------KARINE RASPAIL------------------------- */}
-        <ParallaxLayer offset={1.999} speed={0.5}>
+        <ParallaxLayer offset={3.3} speed={2}>
           <ProjectOverview
-            pageNumber="02"
+            pageNumber="04"
             totalPages="05"
             titlePresentation="Karine Raspail - Therapist in psychogenealogy"
             title="Karine Raspail"
@@ -306,243 +543,6 @@ const Home = ({ parallaxRef }) => {
               },
               {
                 url: "https://github.com/dante-alig/portfolio_therapeute.git",
-                title: "Github",
-              },
-            ]}
-          />
-        </ParallaxLayer>
-
-        {/* -------------------------MARVEL------------------------- */}
-        <ParallaxLayer offset={2.999} speed={1}>
-          <ProjectOverview
-            pageNumber="03"
-            totalPages="05"
-            titlePresentation="Marvel - Catalogs all characters in one place."
-            title="Marvel"
-            date="Aout 2024 "
-            techno={["React", "Backend", "Express", "MongoDB"]}
-            roles={["Ui Design", "Dev front & back"]}
-            bgColor="#1A1B1D"
-            txtColor="#ea3323"
-            border="#ea3323"
-            bgContainer="black"
-            pageSlider={{
-              icon: marvel,
-              titleSlider: "Marvel",
-              subTitle: "/ app mobile",
-              texte:
-                "Marvel is a mobile application designed for users of dating apps. Its goal is to transform a profile picture or biography into engaging conversational opportunities. By leveraging artificial intelligence such as GPT-4, the application performs content analysis and generates personalized phrases. This use of AI helps users break the ice in a natural and meaningful way, while highlighting the practical application of LLMs in real-world scenarios. The application is still under development.",
-              imageSlider: marvelPresentation,
-              backgroundTextSlider: "#f71804",
-              textColor: "black",
-            }}
-            technologies={[
-              {
-                id: 1,
-                name: "React",
-                logo: react,
-                url: "https://openai.com",
-              },
-              {
-                id: 2,
-                name: "Express",
-                logo: express,
-                url: "https://openai.com",
-              },
-              {
-                id: 3,
-                name: "Node",
-                logo: nodeJs,
-                url: "https://openai.com",
-              },
-              {
-                id: 4,
-                name: "MongoDb",
-                logo: mongo,
-                url: "https://openai.com",
-              },
-            ]}
-            pageSlider2={{
-              videoSlider: video3,
-              backgroundSlider: "#000000",
-              textColor: "white",
-              featuresOverview: [
-                {
-                  id: 1,
-                  title: "Precise Contextual Analysis",
-                  description:
-                    "Designing a system capable of analyzing dating app bios to detect relevant information such as interests, tone, or personality traits while ensuring high accuracy and respecting user privacy.",
-                },
-                {
-                  id: 2,
-                  title: "Personalized Content Generation",
-                  description:
-                    "Developing an AI-based algorithm (GPT-4O) to create unique and relevant pickup lines tailored to each user, avoiding generic or inappropriate responses to foster meaningful engagement.",
-                },
-                {
-                  id: 3,
-                  title: "Flexible Tone Options",
-                  description:
-                    "Providing a variety of tones (humorous, serious, romantic, etc.) to suit user preferences, while ensuring authenticity and consistency with the analyzed profile data.",
-                },
-                {
-                  id: 4,
-                  title: "Saved Data Management",
-                  description:
-                    "Implementing a feature that allows users to save and organize generated pickup lines, with an intuitive interface that simplifies management and enhances user experience.",
-                },
-                {
-                  id: 5,
-                  title: "Intuitive and User-Friendly Design",
-                  description:
-                    "Creating a clear and simple interface that enables users to effortlessly copy and paste lines into their conversations, while ensuring the application remains accessible and enjoyable for beginners.",
-                },
-              ],
-            }}
-            pageSlider3={mockup}
-            sliderImagesResponsive={[
-              mockupMarvelResponsive,
-              mockupMarvelResponsive2,
-              mockupMarvelResponsive3,
-              mockupMarvelResponsive4,
-              mockupMarvelResponsive5,
-            ]}
-            cssStyle={[
-              "featured-container-tab0",
-              "featured-mokup-tab1",
-              "featured-presentation-tab2",
-              "button-display",
-            ]}
-            buttonStyle={{
-              buttonLink: "button-link-marvel",
-              linkSpan: "link-marvel",
-              typoGitHub: "fa-arrow-up-right-from-square-marvel",
-            }}
-            link={[
-              {
-                url: "https://marvelarchiv.netlify.app/",
-                title: "Netlify",
-              },
-              {
-                url: "https://github.com/dante-alig/portfolio_marvel",
-                title: "Github",
-              },
-            ]}
-          />
-        </ParallaxLayer>
-
-        {/* -------------------------LOVELY PLACE------------------------- */}
-        <ParallaxLayer offset={3.3} speed={3}>
-          <ProjectOverview
-            pageNumber="04"
-            totalPages="05"
-            titlePresentation="Lovely place - the best romantic spots in Paris to create unforgettable dates."
-            title="Lovely place"
-            date="Novembre 2024 - in progress "
-            techno={[
-              "Figma",
-              "React",
-              "Typescript",
-              "Google Map API",
-              "MongoDB",
-            ]}
-            roles={["Ui Design", "Dev front & back"]}
-            bgColor="#f5e6c7"
-            txtColor="black"
-            border="black"
-            bgContainer="black"
-            pageSlider={{
-              icon: lovely,
-              titleSlider: "Lovely place",
-              subTitle: "/ app mobile",
-              texte:
-                "Lovely Place is a website designed to turn every date into a unique and personalized experience. It helps users find the perfect place and activity for a date, based on various criteria such as personal preferences, the desired atmosphere, and budget. The site stands out with its tailored approach, enabling users to plan memorable moments perfectly suited to the person they want to invite.",
-              imageSlider: lovelyPresentation,
-              backgroundTextSlider: "#ffffff",
-              textColor: "black",
-            }}
-            technologies={[
-              {
-                id: 1,
-                name: "React",
-                logo: react,
-                url: "https://openai.com",
-              },
-              {
-                id: 2,
-                name: "Express",
-                logo: express,
-                url: "https://openai.com",
-              },
-              {
-                id: 3,
-                name: "Node Js",
-                logo: nodeJs,
-                url: "https://openai.com",
-              },
-              {
-                id: 4,
-                name: "MongoDB",
-                logo: mongo,
-                url: "https://openai.com",
-              },
-            ]}
-            pageSlider2={{
-              videoSlider: video4,
-              backgroundSlider: "#000000",
-              textColor: "white",
-              featuresOverview: [
-                {
-                  id: 1,
-                  title: "Geolocation-Based Recommendations",
-                  description:
-                    "Implement an accurate geolocation feature to recommend relevant places in real-time.",
-                },
-                {
-                  id: 2,
-                  title: "Category Filters",
-                  description:
-                    "Design an efficient filtering system that allows users to customize their searches based on various criteria (type of activity, ambiance, budget, etc.).",
-                },
-                {
-                  id: 3,
-                  title: "Location Mapping on Google Maps",
-                  description:
-                    "Develop an interactive and responsive map with dynamic markers for each recommended location.",
-                },
-                {
-                  id: 4,
-                  title: "Providing Relevant Information",
-                  description:
-                    "Offer detailed descriptions for each recommended place, including reviews, opening hours, photos, and other useful information to enhance the user experience.",
-                },
-              ],
-            }}
-            pageSlider3={mockup}
-            sliderImagesResponsive={[
-              mockupLovelyResponsive,
-              mockupLovelyResponsive2,
-              mockupLovelyResponsive3,
-              mockupLovelyResponsive4,
-            ]}
-            cssStyle={[
-              "featured-container-tab0",
-              "featured-mokup-tab1",
-              "featured-presentation-tab2",
-              "button-display",
-            ]}
-            buttonStyle={{
-              buttonLink: "button-link-lovely",
-              linkSpan: "link-lovely",
-              typoGitHub: "fa-arrow-up-right-from-square-lovely",
-            }}
-            link={[
-              {
-                url: "https://portfolio-lovelyplace.netlify.app/",
-                title: "Netlify",
-              },
-              {
-                url: "https://github.com/dante-alig/portfolio_lovelyback.git",
                 title: "Github",
               },
             ]}

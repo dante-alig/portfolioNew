@@ -127,7 +127,16 @@ const Home = ({ parallaxRef }) => {
               },
             ]}
             pageSlider2={{
-              videoSlider: video4,
+              images: [
+                {
+                  src: mockupLovelyResponsive,
+                  alt: "lovely place responsive",
+                },
+                {
+                  src: mockupLovelyResponsive2,
+                  alt: "lovely place responsive",
+                },
+              ],
               backgroundSlider: "#000000",
               textColor: "white",
               featuresOverview: [
@@ -157,7 +166,6 @@ const Home = ({ parallaxRef }) => {
                 },
               ],
             }}
-            pageSlider3={mockup}
             sliderImagesResponsive={[
               mockupLovelyResponsive,
               mockupLovelyResponsive2,
@@ -239,7 +247,16 @@ const Home = ({ parallaxRef }) => {
               },
             ]}
             pageSlider2={{
-              videoSlider: video3,
+              images: [
+                {
+                  src: mockupMarvelResponsive,
+                  alt: "marvel responsive",
+                },
+                {
+                  src: mockupMarvelResponsive2,
+                  alt: "marvel responsive",
+                },
+              ],
               backgroundSlider: "#000000",
               textColor: "white",
               featuresOverview: [
@@ -275,7 +292,6 @@ const Home = ({ parallaxRef }) => {
                 },
               ],
             }}
-            pageSlider3={mockup}
             sliderImagesResponsive={[
               mockupMarvelResponsive,
               mockupMarvelResponsive2,
@@ -484,7 +500,16 @@ const Home = ({ parallaxRef }) => {
               },
             ]}
             pageSlider2={{
-              videoSlider: video2,
+              images: [
+                {
+                  src: mockupKarineResponsive,
+                  alt: "karine raspail responsive",
+                },
+                {
+                  src: mockupKarineResponsive2,
+                  alt: "karine raspail responsive",
+                },
+              ],
               backgroundSlider: "#000000",
               textColor: "white",
               featuresOverview: [
@@ -520,7 +545,6 @@ const Home = ({ parallaxRef }) => {
                 },
               ],
             }}
-            pageSlider3={mockup}
             sliderImagesResponsive={[
               mockupKarineResponsive,
               mockupKarineResponsive2,
@@ -583,43 +607,6 @@ const Home = ({ parallaxRef }) => {
                 url: "https://openai.com",
               },
             ]}
-            pageSlider2={{
-              videoSlider: video1,
-              backgroundSlider: "#f0e7cc",
-              textColor: "black",
-              featuresOverview: [
-                {
-                  id: 1,
-                  title: "Precise Contextual Analysis",
-                  description:
-                    "Designing a system capable of analyzing dating app bios to detect relevant information such as interests, tone, or personality traits while ensuring high accuracy and respecting user privacy.",
-                },
-                {
-                  id: 2,
-                  title: "Personalized Content Generation",
-                  description:
-                    "Developing an AI-based algorithm (GPT-4O) to create unique and relevant pickup lines tailored to each user, avoiding generic or inappropriate responses to foster meaningful engagement.",
-                },
-                {
-                  id: 3,
-                  title: "Flexible Tone Options",
-                  description:
-                    "Providing a variety of tones (humorous, serious, romantic, etc.) to suit user preferences, while ensuring authenticity and consistency with the analyzed profile data.",
-                },
-                {
-                  id: 4,
-                  title: "Saved Data Management",
-                  description:
-                    "Implementing a feature that allows users to save and organize generated pickup lines, with an intuitive interface that simplifies management and enhances user experience.",
-                },
-                {
-                  id: 5,
-                  title: "Intuitive and User-Friendly Design",
-                  description:
-                    "Creating a clear and simple interface that enables users to effortlessly copy and paste lines into their conversations, while ensuring the application remains accessible and enjoyable for beginners.",
-                },
-              ],
-            }}
             pageSlider3={yeniMockup}
             sliderImagesResponsive={[
               mockupYeniResponsive,

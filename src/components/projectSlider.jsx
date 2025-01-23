@@ -48,16 +48,20 @@ const ProjectSlider = ({
             <Page1 pageSlider={pageSlider} technologies={technologies} />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className="project-slide">
-            <Page2 pageSlider2={pageSlider2} />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="project-slide">
-            <Page3 pageSlider3={pageSlider3} />
-          </div>
-        </SwiperSlide>
+        {pageSlider2 && (
+          <SwiperSlide>
+            <div className="project-slide">
+              <Page2 pageSlider2={pageSlider2} />
+            </div>
+          </SwiperSlide>
+        )}
+        {pageSlider3 && (
+          <SwiperSlide>
+            <div className="project-slide">
+              <Page3 pageSlider3={pageSlider3} />
+            </div>
+          </SwiperSlide>
+        )}
       </Swiper>
       {/* Liste des liens associés au projet */}
       <ul className="linkto">

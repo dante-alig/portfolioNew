@@ -51,12 +51,6 @@ const Drawer = ({ isOpen, onClose }) => {
                 <h3>Contact</h3>
                 <p>Email: samuel.celeste@gmail.com</p>
                 <p>LinkedIn: samuelceleste</p>
-                <p>
-                  <span>Download : </span>
-                  <a href="/samuelceleste_CV.pdf" download className="cv-link">
-                    C.V
-                  </a>
-                </p>
               </div>
             </div>
           </motion.div>

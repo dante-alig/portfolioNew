@@ -50,6 +50,7 @@ import belamiPresentation from "../images/presentation/belami.png";
 import karinePresentation from "../images/presentation/karine.png";
 import marvelPresentation from "../images/presentation/marvel.png";
 import lovelyPresentation from "../images/presentation/lovely.png";
+import YeniPresentation from "../images/presentation/yeni.png";
 // ------ videos--------
 import video1 from "../images/videos/video1.mp4";
 import video2 from "../images/videos/video2.mp4";
@@ -57,6 +58,7 @@ import video3 from "../images/videos/video3.mp4";
 import video4 from "../images/videos/video4.mp4";
 // ------ mockups--------
 import mockup from "../images/page1/mockup.png";
+import yeniMockup from "../images/mockup_yeni.png";
 
 import { Link } from "react-router-dom";
 
@@ -569,7 +571,7 @@ const Home = ({ parallaxRef }) => {
               subTitle: "/ app mobile",
               texte:
                 "YENI is a platform dedicated to creation, collaboration, and visibility exchange among content creators, artists, influencers, models, and businesses. Its mission is to simplify and streamline collaborations in the audiovisual, creative, and fashion industries by leveraging a model of mutual benefit. At the same time, it enables brands to support their growth in a gradual, creative, and authentic way.",
-              imageSlider: belamiPresentation,
+              imageSlider: YeniPresentation,
               backgroundTextSlider: "#545454",
               textColor: "black",
             }}
@@ -618,7 +620,7 @@ const Home = ({ parallaxRef }) => {
                 },
               ],
             }}
-            pageSlider3={mockup}
+            pageSlider3={yeniMockup}
             sliderImagesResponsive={[
               mockupYeniResponsive,
               mockupYeniResponsive2,

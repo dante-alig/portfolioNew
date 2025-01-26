@@ -59,6 +59,9 @@ import video4 from "../images/videos/video4.mp4";
 // ------ mockups--------
 import mockup from "../images/page1/mockup.png";
 import yeniMockup from "../images/mockup_yeni.png";
+import belamiMockup from "../images/mockup/mockup_belami.png";
+import marvelMockup from "../images/mockup/mockup_marvel.png";
+import karineMockup from "../images/mockup/mockup_karine.png";
 
 import { Link } from "react-router-dom";
 
@@ -93,7 +96,7 @@ const Home = ({ parallaxRef }) => {
             pageSlider={{
               icon: lovely,
               titleSlider: "Lovely place",
-              subTitle: "/ app mobile",
+              subTitle: "/ website",
               texte:
                 "Lovely Place is a website designed to turn every date into a unique and personalized experience. It helps users find the perfect place and activity for a date, based on various criteria such as personal preferences, the desired atmosphere, and budget. The site stands out with its tailored approach, enabling users to plan memorable moments perfectly suited to the person they want to invite.",
               imageSlider: lovelyPresentation,
@@ -157,7 +160,7 @@ const Home = ({ parallaxRef }) => {
                 },
               ],
             }}
-            pageSlider3={mockup}
+            pageSlider3={belamiMockup}
             sliderImagesResponsive={[
               mockupLovelyResponsive,
               mockupLovelyResponsive2,
@@ -178,7 +181,7 @@ const Home = ({ parallaxRef }) => {
             link={[
               {
                 url: "https://lovelyplace-main.netlify.app/",
-                title: "Netlify",
+                title: "Demo",
               },
               {
                 url: "https://github.com/dante-alig/portfolio_lovelyback.git",
@@ -275,7 +278,7 @@ const Home = ({ parallaxRef }) => {
                 },
               ],
             }}
-            pageSlider3={mockup}
+            pageSlider3={marvelMockup}
             sliderImagesResponsive={[
               mockupMarvelResponsive,
               mockupMarvelResponsive2,
@@ -297,7 +300,7 @@ const Home = ({ parallaxRef }) => {
             link={[
               {
                 url: "https://marvelarchiv.netlify.app/",
-                title: "Netlify",
+                title: "Demo",
               },
               {
                 url: "https://github.com/dante-alig/portfolio_marvel",
@@ -520,7 +523,7 @@ const Home = ({ parallaxRef }) => {
                 },
               ],
             }}
-            pageSlider3={mockup}
+            pageSlider3={karineMockup}
             sliderImagesResponsive={[
               mockupKarineResponsive,
               mockupKarineResponsive2,
@@ -541,7 +544,7 @@ const Home = ({ parallaxRef }) => {
             link={[
               {
                 url: "https://psychogenealogie.netlify.app",
-                title: "Netlify",
+                title: "Demo",
               },
               {
                 url: "https://github.com/dante-alig/portfolio_therapeute.git",

@@ -44,6 +44,8 @@ import motion2 from "../images/technos/motion2.png";
 import react2 from "../images/technos/react2.png";
 import mongo from "../images/technos/mongodb.png";
 import expo from "../images/technos/expo.png";
+import google from "../images/technos/google.png";
+import motion from "../images/technos/motion.png";
 
 // ------ presentation--------
 import belamiPresentation from "../images/presentation/belami.png";
@@ -56,6 +58,7 @@ import video1 from "../images/videos/video1.mp4";
 import video2 from "../images/videos/video2.mp4";
 import video3 from "../images/videos/video3.mp4";
 import video4 from "../images/videos/video4.mp4";
+import video5 from "../images/videos/video5.mp4";
 // ------ mockups--------
 import mockup from "../images/page1/mockup.png";
 import yeniMockup from "../images/mockup_yeni.png";
@@ -81,13 +84,7 @@ const Home = ({ parallaxRef }) => {
             titlePresentation="Lovely place - the best romantic spots in Paris to create unforgettable dates."
             title="Lovely place"
             date="Novembre 2024 - in progress "
-            techno={[
-              "Figma",
-              "React",
-              "Typescript",
-              "Google Map API",
-              "MongoDB",
-            ]}
+            techno={["Figma", "React", "Google Map API", "MongoDB", "Stripe"]}
             roles={["Ui Design", "Dev front & back"]}
             bgColor="#f5e6c7"
             txtColor="black"
@@ -128,6 +125,12 @@ const Home = ({ parallaxRef }) => {
                 logo: mongo,
                 url: "https://openai.com",
               },
+              {
+                id: 5,
+                name: "Google",
+                logo: google,
+                url: "https://developers.google.com/maps?hl=fr",
+              },
             ]}
             pageSlider2={{
               videoSlider: video4,
@@ -136,27 +139,33 @@ const Home = ({ parallaxRef }) => {
               featuresOverview: [
                 {
                   id: 1,
-                  title: "Geolocation-Based Recommendations",
+                  title: "Advanced Geolocation and Map Integration",
                   description:
-                    "Implement an accurate geolocation feature to recommend relevant places in real-time.",
+                    "Leverage the Google Maps API to provide precise geolocation features and an interactive map experience. Display real-time recommendations, opening hours, dynamic markers for locations, and offer detailed routes for seamless navigation.",
                 },
                 {
                   id: 2,
-                  title: "Category Filters",
+                  title: "Intelligent and Customizable Filtering",
                   description:
-                    "Design an efficient filtering system that allows users to customize their searches based on various criteria (type of activity, ambiance, budget, etc.).",
+                    "Develop a robust and intelligent filtering system, allowing users to refine their search based on criteria such as activity type, ambiance, budget, or personalized preferences.",
                 },
                 {
                   id: 3,
-                  title: "Location Mapping on Google Maps",
+                  title: "Member-Exclusive Content Access",
                   description:
-                    "Develop an interactive and responsive map with dynamic markers for each recommended location.",
+                    "Implement a secure authentication and premium membership system, granting exclusive access to curated content and advanced features tailored specifically for subscribed users.",
                 },
                 {
                   id: 4,
-                  title: "Providing Relevant Information",
+                  title: "Admin Dashboard for Easy Management",
                   description:
-                    "Offer detailed descriptions for each recommended place, including reviews, opening hours, photos, and other useful information to enhance the user experience.",
+                    "Set up a feature-rich administrative interface to facilitate efficient management of locations and activities, with tools to add, edit, or delete content in real time.",
+                },
+                {
+                  id: 5,
+                  title: "Secure Payment System with Stripe",
+                  description:
+                    "Integrate a streamlined and secure payment workflow using Stripe, ensuring smooth transactions while complying with the latest data privacy and security standards.",
                 },
               ],
             }}
@@ -210,7 +219,7 @@ const Home = ({ parallaxRef }) => {
               titleSlider: "Marvel",
               subTitle: "/ app mobile",
               texte:
-                "Marvel is a mobile application designed for users of dating apps. Its goal is to transform a profile picture or biography into engaging conversational opportunities. By leveraging artificial intelligence such as GPT-4, the application performs content analysis and generates personalized phrases. This use of AI helps users break the ice in a natural and meaningful way, while highlighting the practical application of LLMs in real-world scenarios. The application is still under development.",
+                "Marvel is a project I worked on during my training at Le Réacteur. We used a custom Marvel API, developed by Le Réacteur, to simulate real API integration. The website included a secured registration and login system, enabling users to manage their favorite items. Some information or images might be missing due to the API's limited database. This 4-day project was a valuable opportunity to practice coding under time constraints.",
               imageSlider: marvelPresentation,
               backgroundTextSlider: "#f71804",
               textColor: "black",
@@ -240,6 +249,12 @@ const Home = ({ parallaxRef }) => {
                 logo: mongo,
                 url: "https://openai.com",
               },
+              {
+                id: 5,
+                name: "Framer",
+                logo: motion,
+                url: "https://openai.com",
+              },
             ]}
             pageSlider2={{
               videoSlider: video3,
@@ -248,33 +263,33 @@ const Home = ({ parallaxRef }) => {
               featuresOverview: [
                 {
                   id: 1,
-                  title: "Precise Contextual Analysis",
+                  title: "Marvel API Integration",
                   description:
-                    "Designing a system capable of analyzing dating app bios to detect relevant information such as interests, tone, or personality traits while ensuring high accuracy and respecting user privacy.",
+                    "Building a web application using the Marvel API to efficiently fetch and display superhero data, demonstrating the ability to work with real-world APIs.",
                 },
                 {
                   id: 2,
-                  title: "Personalized Content Generation",
+                  title: "User Authentication System",
                   description:
-                    "Developing an AI-based algorithm (GPT-4O) to create unique and relevant pickup lines tailored to each user, avoiding generic or inappropriate responses to foster meaningful engagement.",
+                    "Implementing a secure registration and login system, allowing users to create accounts, log in, and manage their favorite superheroes securely.",
                 },
                 {
                   id: 3,
-                  title: "Flexible Tone Options",
+                  title: "Favorite Items Management",
                   description:
-                    "Providing a variety of tones (humorous, serious, romantic, etc.) to suit user preferences, while ensuring authenticity and consistency with the analyzed profile data.",
+                    "Adding functionality for users to save and organize their favorite Marvel characters while ensuring a seamless user experience.",
                 },
                 {
                   id: 4,
-                  title: "Saved Data Management",
+                  title: "Modern Visual Design",
                   description:
-                    "Implementing a feature that allows users to save and organize generated pickup lines, with an intuitive interface that simplifies management and enhances user experience.",
+                    "Designing a sleek, dark-themed interface with bold colors and a clear layout, enhancing the user experience by making the information visually appealing and easy to navigate.",
                 },
                 {
                   id: 5,
-                  title: "Intuitive and User-Friendly Design",
+                  title: "Time-Based Development Challenge",
                   description:
-                    "Creating a clear and simple interface that enables users to effortlessly copy and paste lines into their conversations, while ensuring the application remains accessible and enjoyable for beginners.",
+                    "Developing the project under a 7-day deadline, focusing on delivering a functional outcome while enhancing technical skills and time management.",
                 },
               ],
             }}
@@ -450,7 +465,13 @@ const Home = ({ parallaxRef }) => {
             titlePresentation="Karine Raspail - Therapist in psychogenealogy"
             title="Karine Raspail"
             date="September 2024"
-            techno={["React", "responsive", "Typescript", "Frame Motion"]}
+            techno={[
+              "React",
+              "responsive",
+              "Typescript",
+              "Frame Motion",
+              "Calendly",
+            ]}
             roles={["Ui Design", "Dev front"]}
             bgColor="#E1EAE9"
             txtColor="black"
@@ -493,33 +514,27 @@ const Home = ({ parallaxRef }) => {
               featuresOverview: [
                 {
                   id: 1,
-                  title: "Precise Contextual Analysis",
+                  title: "Learning New Technologies",
                   description:
-                    "Designing a system capable of analyzing dating app bios to detect relevant information such as interests, tone, or personality traits while ensuring high accuracy and respecting user privacy.",
+                    "Familiarizing with TypeScript and its key concepts, such as static typing and interfaces, to ensure robust and maintainable code, while integrating Framer for smooth and interactive animations.",
                 },
                 {
                   id: 2,
-                  title: "Personalized Content Generation",
+                  title: "Optimization for Multiple Devices",
                   description:
-                    "Developing an AI-based algorithm (GPT-4O) to create unique and relevant pickup lines tailored to each user, avoiding generic or inappropriate responses to foster meaningful engagement.",
+                    "Developing a responsive interface compatible with various screen sizes (desktops, tablets, smartphones) and ensuring optimal compatibility across browsers for consistent user experiences.",
                 },
                 {
                   id: 3,
-                  title: "Flexible Tone Options",
+                  title: "Simple but Effective Design",
                   description:
-                    "Providing a variety of tones (humorous, serious, romantic, etc.) to suit user preferences, while ensuring authenticity and consistency with the analyzed profile data.",
+                    "Designing a professional, minimalist interface tailored to specific client needs, ensuring smooth and seamless navigation through intuitive section structuring.",
                 },
                 {
                   id: 4,
-                  title: "Saved Data Management",
+                  title: "Appointment Scheduling with Calendly",
                   description:
-                    "Implementing a feature that allows users to save and organize generated pickup lines, with an intuitive interface that simplifies management and enhances user experience.",
-                },
-                {
-                  id: 5,
-                  title: "Intuitive and User-Friendly Design",
-                  description:
-                    "Creating a clear and simple interface that enables users to effortlessly copy and paste lines into their conversations, while ensuring the application remains accessible and enjoyable for beginners.",
+                    "Implementing an appointment scheduling feature through Calendly, allowing users to easily book consultations with a seamless and integrated process.",
                 },
               ],
             }}
@@ -563,7 +578,7 @@ const Home = ({ parallaxRef }) => {
             title="Yeni"
             txtColor="#abcc48"
             date="Decembre 2024 - in progress"
-            techno={["React Nativ", "Figma", "Open AI"]}
+            techno={["React Nativ", "Figma"]}
             roles={["Ux Ui Design", "Dev front & back"]}
             bgColor="black"
             border="white"
@@ -573,7 +588,7 @@ const Home = ({ parallaxRef }) => {
               titleSlider: "Yeni",
               subTitle: "/ app mobile",
               texte:
-                "YENI is a platform dedicated to creation, collaboration, and visibility exchange among content creators, artists, influencers, models, and businesses. Its mission is to simplify and streamline collaborations in the audiovisual, creative, and fashion industries by leveraging a model of mutual benefit. At the same time, it enables brands to support their growth in a gradual, creative, and authentic way.",
+                "YENI is a platform dedicated to creation, collaboration, and visibility exchange among content creators, artists, influencers, models, and businesses. Its mission is to simplify and streamline collaborations in the audiovisual, creative, and fashion industries by leveraging a model of mutual benefit. At the same time, it enables brands to support their growth in a gradual, creative, and authentic way. However, I cannot disclose the code or the complete project details at this time, as my client wishes to maintain confidentiality.",
               imageSlider: YeniPresentation,
               backgroundTextSlider: "#545454",
               textColor: "black",
@@ -585,41 +600,47 @@ const Home = ({ parallaxRef }) => {
                 logo: openai,
                 url: "https://openai.com",
               },
+              {
+                id: 2,
+                name: "Expo",
+                logo: expo,
+                url: "https://openai.com",
+              },
+              {
+                id: 3,
+                name: "Figma",
+                logo: figma,
+                url: "https://openai.com",
+              },
+              {
+                id: 4,
+                name: "Express",
+                logo: express,
+                url: "https://openai.com",
+              },
+              {
+                id: 5,
+                name: "Node",
+                logo: nodeJs,
+                url: "https://openai.com",
+              },
+              {
+                id: 6,
+                name: "React",
+                logo: react,
+                url: "https://openai.com",
+              },
             ]}
             pageSlider2={{
-              videoSlider: video1,
-              backgroundSlider: "#f0e7cc",
+              videoSlider: video5,
+              backgroundSlider: "#545454",
               textColor: "black",
               featuresOverview: [
                 {
                   id: 1,
-                  title: "Precise Contextual Analysis",
+                  title: "Features Are Confidential",
                   description:
-                    "Designing a system capable of analyzing dating app bios to detect relevant information such as interests, tone, or personality traits while ensuring high accuracy and respecting user privacy.",
-                },
-                {
-                  id: 2,
-                  title: "Personalized Content Generation",
-                  description:
-                    "Developing an AI-based algorithm (GPT-4O) to create unique and relevant pickup lines tailored to each user, avoiding generic or inappropriate responses to foster meaningful engagement.",
-                },
-                {
-                  id: 3,
-                  title: "Flexible Tone Options",
-                  description:
-                    "Providing a variety of tones (humorous, serious, romantic, etc.) to suit user preferences, while ensuring authenticity and consistency with the analyzed profile data.",
-                },
-                {
-                  id: 4,
-                  title: "Saved Data Management",
-                  description:
-                    "Implementing a feature that allows users to save and organize generated pickup lines, with an intuitive interface that simplifies management and enhances user experience.",
-                },
-                {
-                  id: 5,
-                  title: "Intuitive and User-Friendly Design",
-                  description:
-                    "Creating a clear and simple interface that enables users to effortlessly copy and paste lines into their conversations, while ensuring the application remains accessible and enjoyable for beginners.",
+                    "This section will be available upon the public release of the application.",
                 },
               ],
             }}
@@ -642,12 +663,7 @@ const Home = ({ parallaxRef }) => {
               linkSpan: "link-marvel",
               typoGitHub: "fa-arrow-up-right-from-square-yeni",
             }}
-            link={[
-              {
-                url: "",
-                title: "Figma",
-              },
-            ]}
+            link={[]}
           />
         </ParallaxLayer>
         <ParallaxLayer offset={4.999} speed={0}>

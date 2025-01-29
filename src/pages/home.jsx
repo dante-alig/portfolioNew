@@ -2,6 +2,7 @@ import Header from "../components/header";
 import React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import ProjectOverview from "../components/projectOverview";
+import ScreenWarning from "../components/ScreenWarning";
 // ------ responsive--------
 import mockupBelamiResponsiveInfos from "../images/responsive/belami.png";
 import mockupBelamiResponsive from "../images/responsive/belami1.png";
@@ -71,6 +72,7 @@ import { Link } from "react-router-dom";
 const Home = ({ parallaxRef }) => {
   return (
     <div className="container">
+      <ScreenWarning />
       <Parallax ref={parallaxRef} pages={6} style={{ top: "0", left: "0" }}>
         <ParallaxLayer offset={0} speed={0}>
           <Header parallaxRef={parallaxRef} />
@@ -84,7 +86,14 @@ const Home = ({ parallaxRef }) => {
             titlePresentation="Lovely place - the best romantic spots in Paris to create unforgettable dates."
             title="Lovely place"
             date="Novembre 2024 - in progress "
-            techno={["Figma", "React", "Google Map API", "MongoDB", "Stripe"]}
+            techno={[
+              "Figma",
+              "React",
+              "Google Map API",
+              "MongoDB",
+              "Stripe",
+              "TypeScript",
+            ]}
             roles={["Ui Design", "Dev front & back"]}
             bgColor="#f5e6c7"
             txtColor="black"
@@ -105,31 +114,31 @@ const Home = ({ parallaxRef }) => {
                 id: 1,
                 name: "React",
                 logo: react,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 2,
                 name: "Express",
                 logo: express,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 3,
                 name: "Node Js",
                 logo: nodeJs,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 4,
                 name: "MongoDB",
                 logo: mongo,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 5,
                 name: "Google",
                 logo: google,
-                url: "https://developers.google.com/maps?hl=fr",
+                url: "#",
               },
             ]}
             pageSlider2={{
@@ -193,7 +202,7 @@ const Home = ({ parallaxRef }) => {
                 title: "Demo",
               },
               {
-                url: "https://github.com/dante-alig/portfolio_lovelyback.git",
+                url: "https://github.com/dante-alig/lovelyplace_tsx.git",
                 title: "Github",
               },
             ]}
@@ -229,31 +238,31 @@ const Home = ({ parallaxRef }) => {
                 id: 1,
                 name: "React",
                 logo: react,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 2,
                 name: "Express",
                 logo: express,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 3,
                 name: "Node",
                 logo: nodeJs,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 4,
                 name: "MongoDb",
                 logo: mongo,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 5,
                 name: "Framer",
                 logo: motion,
-                url: "https://openai.com",
+                url: "#",
               },
             ]}
             pageSlider2={{
@@ -354,37 +363,37 @@ const Home = ({ parallaxRef }) => {
                 id: 1,
                 name: "OpenAI",
                 logo: openai,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 2,
                 name: "Expo",
                 logo: expo,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 3,
                 name: "Figma",
                 logo: figma,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 4,
                 name: "Express",
                 logo: express,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 5,
                 name: "Node",
                 logo: nodeJs,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 6,
                 name: "React",
                 logo: react,
-                url: "https://openai.com",
+                url: "#",
               },
             ]}
             pageSlider2={{
@@ -492,19 +501,19 @@ const Home = ({ parallaxRef }) => {
                 id: 1,
                 name: "React",
                 logo: react2,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 2,
                 name: "Ts",
                 logo: typescript2,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 3,
                 name: "Framer",
                 logo: motion2,
-                url: "https://openai.com",
+                url: "#",
               },
             ]}
             pageSlider2={{
@@ -598,37 +607,37 @@ const Home = ({ parallaxRef }) => {
                 id: 1,
                 name: "OpenAI",
                 logo: openai,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 2,
                 name: "Expo",
                 logo: expo,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 3,
                 name: "Figma",
                 logo: figma,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 4,
                 name: "Express",
                 logo: express,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 5,
                 name: "Node",
                 logo: nodeJs,
-                url: "https://openai.com",
+                url: "#",
               },
               {
                 id: 6,
                 name: "React",
                 logo: react,
-                url: "https://openai.com",
+                url: "#",
               },
             ]}
             pageSlider2={{

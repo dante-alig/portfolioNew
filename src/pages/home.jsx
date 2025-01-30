@@ -85,7 +85,7 @@ const Home = ({ parallaxRef }) => {
             totalPages="05"
             titlePresentation="Lovely place - the best romantic spots in Paris to create unforgettable dates."
             title="Lovely place"
-            date="Novembre 2024 - in progress "
+            date=" December 2024 - in progress "
             techno={[
               "Figma",
               "React",

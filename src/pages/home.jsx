@@ -27,12 +27,17 @@ import mockupYeniResponsive from "../images/responsive/yeni1.png";
 import mockupYeniResponsive2 from "../images/responsive/yeni2.png";
 import mockupYeniResponsive3 from "../images/responsive/yeni3.png";
 import mockupYeniResponsive4 from "../images/responsive/yeni4.png";
+import ghostResponsive from "../images/responsive/ghost1.png";
+import ghostResponsive2 from "../images/responsive/ghost2.png";
+import ghostResponsive3 from "../images/responsive/ghost3.png";
+
 // ------ icons--------
 import karine from "../images/icon/k.png";
 import belami from "../images/icon/belami.png";
 import marvel from "../images/icon/marvel.png";
 import lovely from "../images/icon/lovelyplace.png";
 import yeni from "../images/icon/yeni.png";
+import ghost from "../images/icon/ghost.png";
 
 // ------ technos--------
 import openai from "../images/technos/openai.png";
@@ -40,6 +45,7 @@ import figma from "../images/technos/figma.png";
 import react from "../images/technos/react.png";
 import nodeJs from "../images/technos/node.png";
 import express from "../images/technos/express.png";
+import typescript from "../images/technos/typescript.png";
 import typescript2 from "../images/technos/typescript2.png";
 import motion2 from "../images/technos/motion2.png";
 import react2 from "../images/technos/react2.png";
@@ -47,6 +53,9 @@ import mongo from "../images/technos/mongodb.png";
 import expo from "../images/technos/expo.png";
 import google from "../images/technos/google.png";
 import motion from "../images/technos/motion.png";
+import next from "../images/technos/next.png";
+import tailwind from "../images/technos/tailwind.png";
+import eslint from "../images/technos/eslint.png";
 
 // ------ presentation--------
 import belamiPresentation from "../images/presentation/belami.png";
@@ -54,18 +63,21 @@ import karinePresentation from "../images/presentation/karine.png";
 import marvelPresentation from "../images/presentation/marvel.png";
 import lovelyPresentation from "../images/presentation/lovely.png";
 import YeniPresentation from "../images/presentation/yeni.png";
+import ghostPresentation from "../images/presentation/ghost.png";
 // ------ videos--------
 import video1 from "../images/videos/video1.mp4";
 import video2 from "../images/videos/video2.mp4";
 import video3 from "../images/videos/video3.mp4";
 import video4 from "../images/videos/video4.mp4";
 import video5 from "../images/videos/video5.mp4";
+import video6 from "../images/videos/video6.mp4";
 // ------ mockups--------
 import mockup from "../images/page1/mockup.png";
 import yeniMockup from "../images/mockup_yeni.png";
 import belamiMockup from "../images/mockup/mockup_belami.png";
 import marvelMockup from "../images/mockup/mockup_marvel.png";
 import karineMockup from "../images/mockup/mockup_karine.png";
+import ghostMockup from "../images/mockup/mockup_ghost.png";
 
 import { Link } from "react-router-dom";
 
@@ -73,16 +85,140 @@ const Home = ({ parallaxRef }) => {
   return (
     <div className="container">
       <ScreenWarning />
-      <Parallax ref={parallaxRef} pages={6} style={{ top: "0", left: "0" }}>
+      <Parallax ref={parallaxRef} pages={7} style={{ top: "0", left: "0" }}>
         <ParallaxLayer offset={0} speed={0}>
           <Header parallaxRef={parallaxRef} />
         </ParallaxLayer>
 
-        {/* -------------------------LOVELY PLACE------------------------- */}
+        {/* -------------------------GHOST------------------------- */}
         <ParallaxLayer offset={0.999} speed={0.5}>
           <ProjectOverview
             pageNumber="01"
-            totalPages="05"
+            totalPages="06"
+            titlePresentation="Ghost - create, share, and take on random challenges with friends."
+            title="Ghost"
+            date="february 2025 - in progress "
+            techno={[
+              "Next.js",
+              "framer motion",
+              "Eslint",
+              "Tailwind",
+              "TypeScript",
+              "responsive design",
+            ]}
+            roles={["Ui Design", "Dev front & back"]}
+            bgColor="#1a1b1d"
+            txtColor="#9333E9"
+            border="#9333E9"
+            bgContainer="1a1b1d"
+            pageSlider={{
+              icon: ghost,
+              titleSlider: "Ghost",
+              subTitle: "/ website",
+              texte:
+                "Ghost is a fun and interactive platform that I created to allow users to suggest and take on fun challenges with their friends. Invite your friends, create a list of challenges together, and then let chance decide for you! Thanks to its random selection system, each challenge becomes an exciting surprise to tackle, strengthening bonds within friend groups.",
+              imageSlider: ghostPresentation,
+              backgroundTextSlider: "#ffffff",
+              textColor: "black",
+            }}
+            technologies={[
+              {
+                id: 1,
+                name: "Next.js",
+                logo: next,
+                url: "#",
+              },
+              {
+                id: 2,
+                name: "Tailwind",
+                logo: tailwind,
+                url: "#",
+              },
+              {
+                id: 4,
+                name: "framer",
+                logo: motion,
+                url: "#",
+              },
+              {
+                id: 5,
+                name: "eslint",
+                logo: eslint,
+                url: "#",
+              },
+              {
+                id: 3,
+                name: "typescript",
+                logo: typescript,
+                url: "#",
+              },
+            ]}
+            pageSlider2={{
+              videoSlider: video6,
+              backgroundSlider: "black",
+              textColor: "white",
+              featuresOverview: [
+                {
+                  id: 1,
+                  title: "Captivating Visual Design",
+                  description:
+                    "A vibrant yellow background with strategically placed images and clear layouts creates an engaging and visually appealing homepage.",
+                },
+                {
+                  id: 2,
+                  title: "Interactive Experience",
+                  description:
+                    "Dynamic animations like card flips and responsive actions ensure an enjoyable, gamified experience for users.",
+                },
+                {
+                  id: 3,
+                  title: "Random Challenge Assignment",
+                  description:
+                    "Tasks are randomly and fairly distributed using an automated system, with clear visual states to track progress.",
+                },
+                {
+                  id: 4,
+                  title: "Responsive Design",
+                  description:
+                    "The interface adapts seamlessly to all screen sizes, using a dynamic grid layout for optimal functionality and an accessible user experience.",
+                },
+              ],
+            }}
+            pageSlider3={ghostMockup}
+            sliderImagesResponsive={[
+              ghostResponsive,
+              ghostResponsive2,
+              ghostResponsive3,
+            ]}
+            cssStyle={[
+              "featured-container-tab0",
+              "featured-mokup-tab1",
+              "featured-presentation-tab2",
+              "button-display",
+            ]}
+            buttonStyle={{
+              buttonLink: "button-link-lovely",
+              linkSpan: "link-lovely",
+              typoGitHub: "fa-arrow-up-right-from-square-lovely",
+            }}
+            link={[
+              {
+                url: "https://dareyouapp.netlify.app/",
+                title: "Demo",
+              },
+              {
+                url: "https://github.com/dante-alig/lovelyplace_tsx.git",
+                title: "Github",
+              },
+            ]}
+          />
+        </ParallaxLayer>
+
+        {/* -------------------------LOVELY PLACE------------------------- */}
+        <ParallaxLayer offset={1.999} speed={0.5}>
+          <ProjectOverview
+            pageNumber="02"
+            totalPages="06"
             titlePresentation="Lovely place - the best romantic spots in Paris to create unforgettable dates."
             title="Lovely place"
             date=" December 2024 - in progress "
@@ -210,10 +346,10 @@ const Home = ({ parallaxRef }) => {
         </ParallaxLayer>
 
         {/* -------------------------MARVEL------------------------- */}
-        <ParallaxLayer offset={1.999} speed={0.5}>
+        <ParallaxLayer offset={2.999} speed={1.5}>
           <ProjectOverview
-            pageNumber="02"
-            totalPages="05"
+            pageNumber="03"
+            totalPages="06"
             titlePresentation="Marvel - Catalogs all characters in one place."
             title="Marvel"
             date="Aout 2024 "
@@ -335,10 +471,10 @@ const Home = ({ parallaxRef }) => {
         </ParallaxLayer>
 
         {/* -------------------------BELAMI------------------------- */}
-        <ParallaxLayer offset={2.999} speed={1.5}>
+        <ParallaxLayer offset={3.3} speed={2}>
           <ProjectOverview
-            pageNumber="03"
-            totalPages="05"
+            pageNumber="04"
+            totalPages="06"
             titlePresentation="Belami - AI generated creative opening messages."
             title="Belami"
             date="October 2024 - in progress"
@@ -467,10 +603,10 @@ const Home = ({ parallaxRef }) => {
         </ParallaxLayer>
 
         {/* -------------------------KARINE RASPAIL------------------------- */}
-        <ParallaxLayer offset={3.3} speed={2}>
+        <ParallaxLayer offset={3.999} speed={0.5}>
           <ProjectOverview
-            pageNumber="04"
-            totalPages="05"
+            pageNumber="05"
+            totalPages="06"
             titlePresentation="Karine Raspail - Therapist in psychogenealogy"
             title="Karine Raspail"
             date="September 2024"
@@ -579,10 +715,10 @@ const Home = ({ parallaxRef }) => {
         </ParallaxLayer>
 
         {/* -------------------------YENI------------------------- */}
-        <ParallaxLayer offset={3.999} speed={0.5}>
+        <ParallaxLayer offset={4.999} speed={0.5}>
           <ProjectOverview
-            pageNumber="05"
-            totalPages="05"
+            pageNumber="01"
+            totalPages="06"
             titlePresentation="Yeni - Connects creators and businesses for seamless creative collaborations."
             title="Yeni"
             txtColor="#abcc48"
@@ -675,7 +811,7 @@ const Home = ({ parallaxRef }) => {
             link={[]}
           />
         </ParallaxLayer>
-        <ParallaxLayer offset={4.999} speed={0}>
+        <ParallaxLayer offset={5.9} speed={0}>
           <div className="about">
             <div className="about-container">
               <div className="title-container-bottom">

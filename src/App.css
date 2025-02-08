@@ -1175,7 +1175,44 @@ header {
   display: none;
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .screen-warning {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .warning-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 20px;
+  }
+
+  .warning-content h2 {
+    color: #ff4444;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .warning-content p {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width: 1920px) {
   .screen-warning {
     display: flex;
     position: fixed;

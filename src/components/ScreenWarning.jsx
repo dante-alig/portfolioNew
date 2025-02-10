@@ -4,7 +4,7 @@ const ScreenWarning = () => {
   return (
     <div className="screen-warning">
       <div className="warning-content">
-        <p>Ce format n'est pas encore disponible</p>
+        <p>This format is not yet available for now.</p>
       </div>
     </div>
   );

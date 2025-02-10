@@ -717,7 +717,7 @@ const Home = ({ parallaxRef }) => {
         {/* -------------------------YENI------------------------- */}
         <ParallaxLayer offset={4.999} speed={0.5}>
           <ProjectOverview
-            pageNumber="01"
+            pageNumber="06"
             totalPages="06"
             titlePresentation="Yeni - Connects creators and businesses for seamless creative collaborations."
             title="Yeni"

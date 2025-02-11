@@ -10,60 +10,60 @@ const Header = ({ parallaxRef }) => {
 
   const titleVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { 
+      transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const describeVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { 
+      transition: {
         duration: 0.6,
         delay: 0.3,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const projectsVariants = {
     hidden: { opacity: 0, x: -20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       x: 0,
-      transition: { 
+      transition: {
         duration: 0.6,
         delay: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const projectTitleVariants = {
     hidden: { opacity: 0, x: -20 },
-    visible: (custom) => ({ 
-      opacity: 1, 
+    visible: (custom) => ({
+      opacity: 1,
       x: 0,
-      transition: { 
+      transition: {
         duration: 0.4,
-        delay: 0.8 + (custom * 0.1),
-        ease: "easeOut"
-      }
-    })
+        delay: 0.8 + custom * 0.1,
+        ease: "easeOut",
+      },
+    }),
   };
 
   return (
     <div>
       <header>
         <div className="title-container">
-          <motion.div 
+          <motion.div
             className="title-box"
             initial="hidden"
             animate="visible"
@@ -72,7 +72,7 @@ const Header = ({ parallaxRef }) => {
             <h1>I'm Samuel</h1>
             <h1>Céleste.</h1>
           </motion.div>
-          <motion.div 
+          <motion.div
             className="describe"
             initial="hidden"
             animate="visible"
@@ -82,44 +82,44 @@ const Header = ({ parallaxRef }) => {
             solutions that blend aesthetics and performance.
           </motion.div>
         </div>
-        <motion.div 
+        <motion.div
           className="projects"
           initial="hidden"
           animate="visible"
           variants={projectsVariants}
         >
           <div className="projects-section">Selected projects</div>
-          <motion.div 
-            className="projects-title" 
-            onClick={() => scrollToSection(1)}
+          <motion.div
+            className="projects-title"
+            onClick={() => scrollToSection(0.95)}
             custom={0}
+            variants={projectTitleVariants}
+          >
+            Ghost
+          </motion.div>
+          <motion.div
+            className="projects-title"
+            onClick={() => scrollToSection(1.95)}
+            custom={1}
+            variants={projectTitleVariants}
+          >
+            Lovely Place
+          </motion.div>
+          <motion.div
+            className="projects-title"
+            onClick={() => scrollToSection(3.1)}
+            custom={2}
             variants={projectTitleVariants}
           >
             Belami
           </motion.div>
-          <motion.div 
-            className="projects-title" 
-            onClick={() => scrollToSection(2)}
-            custom={1}
-            variants={projectTitleVariants}
-          >
-            Psychogenea
-          </motion.div>
-          <motion.div 
-            className="projects-title" 
-            onClick={() => scrollToSection(3)}
-            custom={2}
-            variants={projectTitleVariants}
-          >
-            Lovely place
-          </motion.div>
           <motion.div
             className="projects-title projects-title-under"
-            onClick={() => scrollToSection(4)}
+            onClick={() => scrollToSection(3.95)}
             custom={3}
             variants={projectTitleVariants}
           >
-            Yeni
+            Karine Raspail
           </motion.div>
         </motion.div>
       </header>

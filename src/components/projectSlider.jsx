@@ -16,13 +16,6 @@ import Page2 from "./page2";
 import Page3 from "./page3";
 import { trackClick } from "../utils/analytics";
 
-/**
- * Composant ProjectSlider
- * Crée un carrousel d'images et de vidéos avec navigation et pagination
- * @param {Array} images - Tableau des sources d'images/vidéos à afficher
- * @param {Array} link - Tableau d'objets contenant les liens (url et titre)
- * @param {string} txtColor - Couleur du texte pour les liens
- */
 const ProjectSlider = ({
   images,
   link,
@@ -34,7 +27,6 @@ const ProjectSlider = ({
 }) => {
   return (
     <div className="project-slider-container">
-      {/* Configuration du carrousel Swiper */}
       <Swiper
         modules={[Navigation, Pagination, EffectFade]}
         spaceBetween={0}
@@ -60,7 +52,7 @@ const ProjectSlider = ({
           </div>
         </SwiperSlide>
       </Swiper>
-      {/* Liste des liens associés au projet */}
+
       <ul className="linkto">
         {link.map((objet, index) => {
           return (
@@ -71,7 +63,7 @@ const ProjectSlider = ({
                   style={{ color: txtColor }}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => trackClick(objet.title, 'external-link')}
+                  onClick={() => trackClick(objet.title, "external-link")}
                 >
                   {objet.title}
                   <FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" />

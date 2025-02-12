@@ -14,6 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Page1 from "./page1";
 import Page2 from "./page2";
 import Page3 from "./page3";
+import { trackClick } from "../utils/analytics";
 
 /**
  * Composant ProjectSlider
@@ -70,6 +71,7 @@ const ProjectSlider = ({
                   style={{ color: txtColor }}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackClick(objet.title, 'external-link')}
                 >
                   {objet.title}
                   <FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" />

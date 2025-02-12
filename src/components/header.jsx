@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import Scroll from "./scroll";
+import { trackClick } from "../utils/analytics";
 
 const Header = ({ parallaxRef }) => {
-  const scrollToSection = (offset) => {
+  const scrollToSection = (offset, projectName) => {
+    trackClick(projectName, 'project-link');
     if (parallaxRef.current) {
       parallaxRef.current.scrollTo(offset);
     }
@@ -91,7 +93,7 @@ const Header = ({ parallaxRef }) => {
           <div className="projects-section">Selected projects</div>
           <motion.div
             className="projects-title"
-            onClick={() => scrollToSection(0.95)}
+            onClick={() => scrollToSection(0.95, 'Ghost')}
             custom={0}
             variants={projectTitleVariants}
           >
@@ -99,7 +101,7 @@ const Header = ({ parallaxRef }) => {
           </motion.div>
           <motion.div
             className="projects-title"
-            onClick={() => scrollToSection(1.95)}
+            onClick={() => scrollToSection(1.95, 'Lovely Place')}
             custom={1}
             variants={projectTitleVariants}
           >
@@ -107,7 +109,7 @@ const Header = ({ parallaxRef }) => {
           </motion.div>
           <motion.div
             className="projects-title"
-            onClick={() => scrollToSection(3.1)}
+            onClick={() => scrollToSection(3.1, 'Belami')}
             custom={2}
             variants={projectTitleVariants}
           >
@@ -115,7 +117,7 @@ const Header = ({ parallaxRef }) => {
           </motion.div>
           <motion.div
             className="projects-title projects-title-under"
-            onClick={() => scrollToSection(3.95)}
+            onClick={() => scrollToSection(3.95, 'Karine Raspail')}
             custom={3}
             variants={projectTitleVariants}
           >

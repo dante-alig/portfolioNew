@@ -627,7 +627,7 @@ const Home = ({ parallaxRef }) => {
               titleSlider: "Psychogenealogy",
               subTitle: "/ Website",
               texte:
-                "My first individual web development project, created for a family member. This project allowed me to strengthen my programming skills and familiarize myself with TypeScript. The intentionally simple design reflects my main goal: to explore and master the technical fundamentals of this language.",
+                "A web development project created for a therapist. This project allowed me to strengthen my programming skills and familiarize myself with TypeScript. The intentionally simple design reflects the main goal: to explore and master the technical fundamentals of this language.",
               imageSlider: karinePresentation,
               backgroundTextSlider: "#000000",
               textColor: "white",

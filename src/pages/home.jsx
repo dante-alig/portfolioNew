@@ -1,5 +1,5 @@
 import Header from "../components/header";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import ProjectOverview from "../components/projectOverview";
 import ScreenWarning from "../components/ScreenWarning";
@@ -81,17 +81,44 @@ import ghostMockup from "../images/mockup/mockup_ghost.png";
 
 import { Link } from "react-router-dom";
 
+const useParallaxConfig = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 480);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const getParallaxProps = (
+    desktopOffset,
+    desktopSpeed,
+    mobileOffset,
+    mobileSpeed
+  ) => ({
+    offset: isMobile ? mobileOffset : desktopOffset,
+    speed: isMobile ? mobileSpeed : desktopSpeed,
+  });
+
+  return getParallaxProps;
+};
+
 const Home = ({ parallaxRef }) => {
+  const getParallaxProps = useParallaxConfig();
+
   return (
     <div className="container">
       <ScreenWarning />
-      <Parallax ref={parallaxRef} pages={7} style={{ top: "0", left: "0" }}>
-        <ParallaxLayer offset={0} speed={0}>
+      <Parallax ref={parallaxRef} pages={9} style={{ top: "0", left: "0" }}>
+        <ParallaxLayer {...getParallaxProps(0, 0, 0, 0)}>
           <Header parallaxRef={parallaxRef} />
         </ParallaxLayer>
 
         {/* -------------------------GHOST------------------------- */}
-        <ParallaxLayer offset={0.999} speed={0.5}>
+        <ParallaxLayer {...getParallaxProps(0.999, 0.2, 0.999, 0.3)}>
           <ProjectOverview
             pageNumber="01"
             totalPages="06"
@@ -185,11 +212,7 @@ const Home = ({ parallaxRef }) => {
               ],
             }}
             pageSlider3={ghostMockup}
-            sliderImagesResponsive={[
-              ghostResponsive,
-              ghostResponsive2,
-              ghostResponsive3,
-            ]}
+            sliderImagesResponsive={[ghostResponsive2]}
             cssStyle={[
               "featured-container-tab0",
               "featured-mokup-tab1",
@@ -215,7 +238,7 @@ const Home = ({ parallaxRef }) => {
         </ParallaxLayer>
 
         {/* -------------------------LOVELY PLACE------------------------- */}
-        <ParallaxLayer offset={1.999} speed={0.5}>
+        <ParallaxLayer {...getParallaxProps(2.2, 0.2, 1.999, 0.3)}>
           <ProjectOverview
             pageNumber="02"
             totalPages="06"
@@ -315,12 +338,7 @@ const Home = ({ parallaxRef }) => {
               ],
             }}
             pageSlider3={belamiMockup}
-            sliderImagesResponsive={[
-              mockupLovelyResponsive,
-              mockupLovelyResponsive2,
-              mockupLovelyResponsive3,
-              mockupLovelyResponsive4,
-            ]}
+            sliderImagesResponsive={[mockupLovelyResponsive]}
             cssStyle={[
               "featured-container-tab0",
               "featured-mokup-tab1",
@@ -346,7 +364,7 @@ const Home = ({ parallaxRef }) => {
         </ParallaxLayer>
 
         {/* -------------------------MARVEL------------------------- */}
-        <ParallaxLayer offset={2.999} speed={1.5}>
+        <ParallaxLayer {...getParallaxProps(3.4, 0.2, 2.999, 0.3)}>
           <ProjectOverview
             pageNumber="03"
             totalPages="06"
@@ -439,13 +457,7 @@ const Home = ({ parallaxRef }) => {
               ],
             }}
             pageSlider3={marvelMockup}
-            sliderImagesResponsive={[
-              mockupMarvelResponsive,
-              mockupMarvelResponsive2,
-              mockupMarvelResponsive3,
-              mockupMarvelResponsive4,
-              mockupMarvelResponsive5,
-            ]}
+            sliderImagesResponsive={[mockupMarvelResponsive]}
             cssStyle={[
               "featured-container-tab0",
               "featured-mokup-tab1",
@@ -471,7 +483,7 @@ const Home = ({ parallaxRef }) => {
         </ParallaxLayer>
 
         {/* -------------------------BELAMI------------------------- */}
-        <ParallaxLayer offset={3.3} speed={2}>
+        <ParallaxLayer {...getParallaxProps(4.6, 0.2, 3.999, 0.3)}>
           <ProjectOverview
             pageNumber="04"
             totalPages="06"
@@ -570,14 +582,7 @@ const Home = ({ parallaxRef }) => {
               ],
             }}
             pageSlider3={mockup}
-            sliderImagesResponsive={[
-              mockupBelamiResponsiveInfos,
-              mockupBelamiResponsive,
-              mockupBelamiResponsive2,
-              mockupBelamiResponsive3,
-              mockupBelamiResponsive4,
-              mockupBelamiResponsive5,
-            ]}
+            sliderImagesResponsive={[mockupBelamiResponsive]}
             cssStyle={[
               "featured-container",
               "featured-mokup",
@@ -603,7 +608,7 @@ const Home = ({ parallaxRef }) => {
         </ParallaxLayer>
 
         {/* -------------------------KARINE RASPAIL------------------------- */}
-        <ParallaxLayer offset={3.999} speed={0.5}>
+        <ParallaxLayer {...getParallaxProps(5.8, 0.2, 3.999, 0.3)}>
           <ProjectOverview
             pageNumber="05"
             totalPages="06"
@@ -684,12 +689,7 @@ const Home = ({ parallaxRef }) => {
               ],
             }}
             pageSlider3={karineMockup}
-            sliderImagesResponsive={[
-              mockupKarineResponsive,
-              mockupKarineResponsive2,
-              mockupKarineResponsive3,
-              mockupKarineResponsive4,
-            ]}
+            sliderImagesResponsive={[mockupKarineResponsive]}
             cssStyle={[
               "featured-container-tab0",
               "featured-mokup-tab1",
@@ -715,7 +715,7 @@ const Home = ({ parallaxRef }) => {
         </ParallaxLayer>
 
         {/* -------------------------YENI------------------------- */}
-        <ParallaxLayer offset={4.999} speed={0.5}>
+        <ParallaxLayer {...getParallaxProps(7, 0.2, 4.999, 0.3)}>
           <ProjectOverview
             pageNumber="06"
             totalPages="06"
@@ -790,12 +790,7 @@ const Home = ({ parallaxRef }) => {
               ],
             }}
             pageSlider3={yeniMockup}
-            sliderImagesResponsive={[
-              mockupYeniResponsive,
-              mockupYeniResponsive2,
-              mockupYeniResponsive3,
-              mockupYeniResponsive4,
-            ]}
+            sliderImagesResponsive={[mockupYeniResponsive]}
             cssStyle={[
               "featured-container",
               "featured-mokup",
@@ -811,7 +806,7 @@ const Home = ({ parallaxRef }) => {
             link={[]}
           />
         </ParallaxLayer>
-        <ParallaxLayer offset={5.9} speed={0}>
+        <ParallaxLayer {...getParallaxProps(8.2, 0.2, 5.9, 0.3)}>
           <div className="about">
             <div className="about-container">
               <div className="title-container-bottom">

@@ -50,25 +50,6 @@ const ProjectSliderResponsive = ({ images, link, txtColor }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <ul className="linkto">
-        {link.map((objet, index) => {
-          return (
-            <ul key={index} className="linkto">
-              <li style={{ border: `1px solid ${txtColor}` }}>
-                <Link
-                  to={objet.url}
-                  style={{ color: txtColor }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {objet.title}
-                  <FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" />
-                </Link>
-              </li>
-            </ul>
-          );
-        })}
-      </ul>
     </div>
   );
 };

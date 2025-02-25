@@ -118,7 +118,7 @@ const Home = ({ parallaxRef }) => {
         </ParallaxLayer>
 
         {/* -------------------------GHOST------------------------- */}
-        <ParallaxLayer {...getParallaxProps(0.999, 0.2, 0.999, 0.3)}>
+        <ParallaxLayer {...getParallaxProps(0.999, 0.2, 0.999, 0.1)}>
           <ProjectOverview
             pageNumber="01"
             totalPages="06"
@@ -238,7 +238,7 @@ const Home = ({ parallaxRef }) => {
         </ParallaxLayer>
 
         {/* -------------------------LOVELY PLACE------------------------- */}
-        <ParallaxLayer {...getParallaxProps(2.2, 0.2, 1.999, 0.3)}>
+        <ParallaxLayer {...getParallaxProps(2.2, 0.2, 2, 0.1)}>
           <ProjectOverview
             pageNumber="02"
             totalPages="06"
@@ -364,7 +364,7 @@ const Home = ({ parallaxRef }) => {
         </ParallaxLayer>
 
         {/* -------------------------MARVEL------------------------- */}
-        <ParallaxLayer {...getParallaxProps(3.4, 0.2, 2.999, 0.3)}>
+        <ParallaxLayer {...getParallaxProps(3.4, 0.2, 3, 0.1)}>
           <ProjectOverview
             pageNumber="03"
             totalPages="06"
@@ -483,7 +483,7 @@ const Home = ({ parallaxRef }) => {
         </ParallaxLayer>
 
         {/* -------------------------BELAMI------------------------- */}
-        <ParallaxLayer {...getParallaxProps(4.6, 0.2, 3.999, 0.3)}>
+        <ParallaxLayer {...getParallaxProps(4.6, 0.2, 4.1, 0.1)}>
           <ProjectOverview
             pageNumber="04"
             totalPages="06"
@@ -608,7 +608,7 @@ const Home = ({ parallaxRef }) => {
         </ParallaxLayer>
 
         {/* -------------------------KARINE RASPAIL------------------------- */}
-        <ParallaxLayer {...getParallaxProps(5.8, 0.2, 3.999, 0.3)}>
+        <ParallaxLayer {...getParallaxProps(5.8, 0.2, 5.2, 0.1)}>
           <ProjectOverview
             pageNumber="05"
             totalPages="06"
@@ -715,7 +715,7 @@ const Home = ({ parallaxRef }) => {
         </ParallaxLayer>
 
         {/* -------------------------YENI------------------------- */}
-        <ParallaxLayer {...getParallaxProps(7, 0.2, 4.999, 0.3)}>
+        <ParallaxLayer {...getParallaxProps(7, 0.2, 6.3, 0.1)}>
           <ProjectOverview
             pageNumber="06"
             totalPages="06"
@@ -806,7 +806,7 @@ const Home = ({ parallaxRef }) => {
             link={[]}
           />
         </ParallaxLayer>
-        <ParallaxLayer {...getParallaxProps(8.2, 0.2, 5.9, 0.3)}>
+        <ParallaxLayer {...getParallaxProps(8.2, 0.2, 7.4, 0.1)}>
           <div className="about">
             <div className="about-container">
               <div className="title-container-bottom">

@@ -2,14 +2,21 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import profil from "../images/profil.jpg";
 import Drawer from "./drawer";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Nav = ({ parallaxRef }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const location = useLocation();
 
   const scrollToSection = (offset) => {
-    if (parallaxRef.current) {
+    if (parallaxRef?.current) {
       parallaxRef.current.scrollTo(offset);
+    }
+  };
+
+  const handleWorkClick = () => {
+    if (location.pathname === "/") {
+      scrollToSection(0);
     }
   };
 
@@ -84,9 +91,17 @@ const Nav = ({ parallaxRef }) => {
 
       {/* ----- Navigation--------- */}
       <nav>
-        <NavLink onClick={() => scrollToSection(0)}>
-          Work
-        </NavLink>
+        {location.pathname === "/" ? (
+          <NavLink onClick={() => scrollToSection(0)}>
+            Work
+          </NavLink>
+        ) : (
+          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+            <NavLink onClick={handleWorkClick}>
+              Work
+            </NavLink>
+          </Link>
+        )}
         <NavLink onClick={() => setIsDrawerOpen(true)}>
           About
         </NavLink>

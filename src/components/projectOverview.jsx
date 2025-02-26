@@ -26,6 +26,9 @@ const ProjectOverview = ({
   technologies,
   pageSlider2,
   pageSlider3,
+  projectId,
+  videoSlider, // Ajout du prop videoSlider
+  txtInfos,
 }) => {
   const titleVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -122,11 +125,33 @@ const ProjectOverview = ({
         pageSlider2={pageSlider2}
         pageSlider3={pageSlider3}
       />
-      <ProjectSliderResponsive
-        images={sliderImagesResponsive}
-        link={link}
-        txtColor={txtColor}
-      />
+      {sliderImagesResponsive && (
+        <ProjectSliderResponsive
+          images={sliderImagesResponsive}
+          link={link}
+          txtColor={txtColor}
+          projectId={projectId || title?.toLowerCase()}
+          projectData={{
+            title,
+            description: titlePresentation,
+            date,
+            technologies: techno,
+            roles,
+            txtColor,
+            txtInfos,
+            bgColor,
+            pageSlider,
+            pageSlider2,
+            pageSlider3,
+            texte: pageSlider?.texte,
+            videoSlider,
+            techno,
+            totalPages,
+            pageNumber,
+            featuresOverview: pageSlider?.featuresOverview,
+          }}
+        />
+      )}
     </div>
   );
 };

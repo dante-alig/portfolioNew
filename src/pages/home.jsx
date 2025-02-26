@@ -3,6 +3,15 @@ import React, { useState, useEffect } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import ProjectOverview from "../components/projectOverview";
 import ScreenWarning from "../components/ScreenWarning";
+
+// Import des vidéos
+import video1 from "../images/videos/video1.mp4";
+import video2 from "../images/videos/video2.mp4";
+import video3 from "../images/videos/video3.mp4";
+import video4 from "../images/videos/video4.mp4";
+import video5 from "../images/videos/video5.mp4";
+import video6 from "../images/videos/video6.mp4";
+
 // ------ responsive--------
 import mockupBelamiResponsiveInfos from "../images/responsive/belami.png";
 import mockupBelamiResponsive from "../images/responsive/belami1.png";
@@ -65,12 +74,12 @@ import lovelyPresentation from "../images/presentation/lovely.png";
 import YeniPresentation from "../images/presentation/yeni.png";
 import ghostPresentation from "../images/presentation/ghost.png";
 // ------ videos--------
-import video1 from "../images/videos/video1.mp4";
-import video2 from "../images/videos/video2.mp4";
-import video3 from "../images/videos/video3.mp4";
-import video4 from "../images/videos/video4.mp4";
-import video5 from "../images/videos/video5.mp4";
-import video6 from "../images/videos/video6.mp4";
+// import video1 from "../images/videos/video1.mp4";
+// import video2 from "../images/videos/video2.mp4";
+// import video3 from "../images/videos/video3.mp4";
+// import video4 from "../images/videos/video4.mp4";
+// import video5 from "../images/videos/video5.mp4";
+// import video6 from "../images/videos/video6.mp4";
 // ------ mockups--------
 import mockup from "../images/page1/mockup.png";
 import yeniMockup from "../images/mockup_yeni.png";
@@ -124,6 +133,7 @@ const Home = ({ parallaxRef }) => {
             totalPages="06"
             titlePresentation="Ghost - create, share, and take on random challenges with friends."
             title="Ghost"
+            projectId="ghost"
             date="february 2025 - in progress "
             techno={[
               "Next.js",
@@ -136,8 +146,10 @@ const Home = ({ parallaxRef }) => {
             roles={["Ui Design", "Dev front & back"]}
             bgColor="#1a1b1d"
             txtColor="#9333E9"
+            txtInfos="grey"
             border="#9333E9"
             bgContainer="1a1b1d"
+            videoSlider={video6} // Ajout de videoSlider
             pageSlider={{
               icon: ghost,
               titleSlider: "Ghost",
@@ -244,9 +256,10 @@ const Home = ({ parallaxRef }) => {
             totalPages="06"
             titlePresentation="Lovely place - the best romantic spots in Paris to create unforgettable dates."
             title="Lovely place"
+            projectId="lovely"
             date=" December 2024 - in progress "
             techno={[
-              "Figma",
+              "Node JS",
               "React",
               "Google Map API",
               "MongoDB",
@@ -256,8 +269,10 @@ const Home = ({ parallaxRef }) => {
             roles={["Ui Design", "Dev front & back"]}
             bgColor="#f5e6c7"
             txtColor="black"
+            txtInfos="grey"
             border="black"
             bgContainer="black"
+            videoSlider={video4} // Ajout de videoSlider
             pageSlider={{
               icon: lovely,
               titleSlider: "Lovely place",
@@ -323,12 +338,7 @@ const Home = ({ parallaxRef }) => {
                   description:
                     "Implement a secure authentication and premium membership system, granting exclusive access to curated content and advanced features tailored specifically for subscribed users.",
                 },
-                {
-                  id: 4,
-                  title: "Admin Dashboard for Easy Management",
-                  description:
-                    "Set up a feature-rich administrative interface to facilitate efficient management of locations and activities, with tools to add, edit, or delete content in real time.",
-                },
+
                 {
                   id: 5,
                   title: "Secure Payment System with Stripe",
@@ -370,13 +380,16 @@ const Home = ({ parallaxRef }) => {
             totalPages="06"
             titlePresentation="Marvel - Catalogs all characters in one place."
             title="Marvel"
+            projectId="marvel"
             date="Aout 2024 "
             techno={["React", "Backend", "Express", "MongoDB"]}
             roles={["Ui Design", "Dev front & back"]}
             bgColor="#1A1B1D"
             txtColor="#ea3323"
+            txtInfos="grey"
             border="#ea3323"
             bgContainer="black"
+            videoSlider={video3} // Ajout de videoSlider
             pageSlider={{
               icon: marvel,
               titleSlider: "Marvel",
@@ -489,13 +502,17 @@ const Home = ({ parallaxRef }) => {
             totalPages="06"
             titlePresentation="Belami - AI generated creative opening messages."
             title="Belami"
+            projectId="belami"
             date="October 2024 - in progress"
             techno={["React Nativ", "Figma", "Open AI", "Backend"]}
             roles={["Ui Design", "Dev front & back"]}
             bgColor="black"
+            txtColor="#ffffff"
+            txtInfos="grey"
             border="white"
             bgContainer="#f5e6c7"
             // Images pour le slider (vous pouvez les remplacer par vos propres images)
+            videoSlider={video1} // Ajout de videoSlider
             pageSlider={{
               icon: belami,
               titleSlider: "Belami",
@@ -614,6 +631,7 @@ const Home = ({ parallaxRef }) => {
             totalPages="06"
             titlePresentation="Karine Raspail - Therapist in psychogenealogy"
             title="Karine Raspail"
+            projectId="karine"
             date="September 2024"
             techno={[
               "React",
@@ -625,8 +643,10 @@ const Home = ({ parallaxRef }) => {
             roles={["Ui Design", "Dev front"]}
             bgColor="#E1EAE9"
             txtColor="black"
+            txtInfos="grey"
             border="black"
             bgContainer="#ffffff"
+            videoSlider={video2} // Ajout de videoSlider
             pageSlider={{
               icon: karine,
               titleSlider: "Psychogenealogy",
@@ -721,13 +741,16 @@ const Home = ({ parallaxRef }) => {
             totalPages="06"
             titlePresentation="Yeni - Connects creators and businesses for seamless creative collaborations."
             title="Yeni"
+            projectId="yeni"
             txtColor="#abcc48"
             date="Decembre 2024 - in progress"
             techno={["React Nativ", "Figma"]}
             roles={["Ux Ui Design", "Dev front & back"]}
             bgColor="black"
+            txtInfos="grey"
             border="white"
             bgContainer="#171616"
+            videoSlider={video5} // Ajout de videoSlider
             pageSlider={{
               icon: yeni,
               titleSlider: "Yeni",
